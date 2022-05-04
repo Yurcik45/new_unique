@@ -1,0 +1,68 @@
+@import "../../App"
+
+.NotificationPopupContainer
+  display: none
+  justify-content: center
+  align-items: center
+  min-width: 250px
+  min-height: 60px
+  top: 50px
+  right: 0
+  position: absolute
+  overflow: hidden
+  border: 1px solid black
+.activator
+  display: flex
+  .SuccessPopup, .DangerPopup
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 250px
+    width: auto
+    max-width: 500px
+    height: 60px
+    padding: 0 15px
+    border-bottom-left-radius: 10px
+    border-top-left-radius: 10px
+    position: relative
+    font-family: $fontMain
+    letter-spacing: 0.2px
+    font-size: 15px
+    color: $simpleBlack
+    background-color: $simpleWhite
+    transition: 1s
+  .SuccessPopup
+    border: 3px solid rgb(0, 209, 31)
+    border-right: none
+  .DangerPopup
+    border: 3px solid #ff1818
+    border-right: none
+  .Transform
+    opacity: 0
+    z-index: 30
+    transform: translate(555px, 0)
+
+@media screen and ( max-width: 1000px )
+  .NotificationPopupContainer
+    min-width: 300px
+    max-width: 300px
+    min-height: 62px
+    max-height: 62px
+    top: 65px
+    margin: 0 auto
+    left: 0
+    .SuccessPopup, .DangerPopup
+      min-width: 260px
+      width: auto
+      max-width: 500px
+      height: 55px
+      padding: 0 15px
+      border-radius: 10px
+      letter-spacing: 0.2px
+      font-size: 15px
+    .SuccessPopup
+      border-right: 3px solid rgb(0, 209, 31)
+    .DangerPopup
+      border-right: 3px solid #ff1818
+    .Transform
+      transform: translate(0, -62px)

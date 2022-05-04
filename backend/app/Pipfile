@@ -1,0 +1,36 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+fastapi-users = {extras = ["oauth", "sqlalchemy"], version = "*"}
+asyncpg = "*"
+aiohttp = "*"
+uvicorn = "*"
+opencv-contrib-python = "*"
+shopifyapi = "*"
+alembic = "*"
+apscheduler = "*"
+selenium = "*"
+bs4 = "*"
+psycopg2 = "*"
+pydantic-sqlalchemy = "*"
+dramatiq = {extras = ["redis", "watch"], version = "*"}
+klaviyo = "*"
+sqlalchemy-utils = "*"
+phonenumbers = "*"
+sentry-sdk = "*"
+furl = "*"
+imagehash = "*"
+jinja2 = "*"
+pika = "*"
+boto3 = "*"
+paddle-client = "*"
+
+[dev-packages]
+flake8 = "*"
+
+[requires]
+python_version = "3.9"

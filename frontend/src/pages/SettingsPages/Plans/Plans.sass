@@ -1,0 +1,360 @@
+@import "../../../App"
+
+*
+  // border: 1px solid black
+
+.prof_plans_mainBlock
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 950px
+  height: 100%
+  border-radius: 10px
+  background-color: $simpleWhite
+  margin: 0 auto
+  .scrollContainer
+    display: none
+    align-items: center
+    justify-content: space-between
+    width: 140px
+    height: 20px
+    margin: 10px 0 15px 0
+    .scrollNumber
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 20px
+      height: 20px
+      font-family: $fontMain
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 65px
+      text-align: center
+      color: $mainColor
+      border: 1px solid $mainColor
+      border-radius: 50%
+      transition: .2s
+    .arrow_left, .arrow_right
+      display: none
+      position: absolute
+      top: 500px
+      img
+        cursor: pointer
+        width: 60px
+        height: 60px
+    .arrow_left
+      left: 310px
+    .arrow_right
+      right: 110px
+  .prof_plans_top
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    min-width: 950px
+    width: 100%
+    height: 180px
+    padding-bottom: 2px
+    background-color: $mainBackground
+    transition: .4s
+    .prof_plans_topItems
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 300px
+      height: 180px
+      border: 1px solid rgba(100, 100, 100, 0.3)
+      cursor: pointer
+      background-color: $simpleWhite
+      border-radius: 5px
+      .prof_plans_topItems_mainText
+        font-family: $fontMain
+        font-style: normal
+        font-weight: bold
+        font-size: 40px
+        line-height: 65px
+        text-align: center
+        color: $mainColor
+      .prof_plans_topItems_text
+        font-family: $fontMain
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 26px
+        text-align: center
+        color: $simpleBlack
+  .prof_plans_bottom
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    min-width: 950px
+    width: 100%
+    height: 800px
+    padding: 50px 0 20px 0
+    background-color: $mainBackground
+    transition: .4s
+    .prof_plans_bottomItems
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-end
+      width: 300px
+      height: 100%
+      cursor: pointer
+      background-color: $mainBackground
+      padding: 0 0 20px 0
+      .prof_plans_bottom_selected
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 300px
+        min-height: 40px
+        background-color: $mainColor
+        font-family: $fontMain
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+        line-height: 26px
+        text-align: center
+        color: #FFFFFF
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+      .prof_plans_bottom_Container
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        width: 300px
+        height: 760px
+        padding-bottom: 20px
+        // border: 1px solid rgba(100, 100, 100, 0.3)
+        border-radius: 10px
+        background-color: $simpleWhite
+        .prof_plans_bottom_header
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 100%
+          height: 55px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 24px
+          line-height: 39px
+          text-align: center
+          color: $simpleBlack
+        .prof_plans_bottom_priceContainer
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          width: 240px
+          height: 140px
+          min-height: 140px
+          background-color: rgba(0, 120, 144, 0.05)
+          border-radius: 5px
+          .prof_plans_bottom_costContainer
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            .prof_plans_bottom_costDollar
+              display: flex
+              flex-direction: column
+              align-items: center
+              left: 0
+              justify-content: flex-start
+              height: 8px
+              width: 3px
+              margin-right: 12px
+              margin-bottom: 50px
+              font-family: $fontMain
+              font-style: normal
+              font-weight: normal
+              font-size: 20px
+              line-height: 33px
+              text-align: center
+              color: $dollarColor
+            .prof_plans_bottom_costPrice
+              display: flex
+              flex-direction: column
+              align-items: center
+              justify-content: center
+              font-family: $fontMain
+              font-style: normal
+              font-weight: normal
+              font-size: 48px
+              line-height: 78px
+              text-align: center
+              color: $simpleBlack
+          .prof_plans_bottom_text
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            font-family: $fontMain
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 23px
+            text-align: center
+            color: $simpleBlack
+          .prof_plans_bottom_textBottom
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            font-family: $fontMain
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 23px
+            text-align: center
+            color: $dollarColor
+        .prof_plans_bottom_description
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          width: 235px
+          height: 40px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: normal
+          font-size: 14px
+          line-height: 23px
+          text-align: center
+          color: $simpleBlack
+          margin: 40px 0
+        .prof_plans_bottom_benefitsContainer
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: space-between
+          width: 280px
+          height: 350px
+          .prof_plans_bottom_benefitsItemsContainer
+            display: flex
+            flex-direction: row
+            width: 100%
+            height: 40px
+            .prof_plans_bottom_benefitsIcon
+              display: flex
+              flex-direction: column
+              align-items: center
+              justify-content: center
+              min-width: 40px
+              height: 40px
+              svg
+                margin-bottom: 25px
+            .prof_plans_bottom_benefitsItem
+              display: flex
+              flex-direction: column
+              font-family: $fontMain
+              font-style: normal
+              font-weight: normal
+              font-size: 14px
+              line-height: 23px
+              width: 220px
+              color: $simpleBlack
+            .Red
+              font-family: $fontMain
+              font-style: normal
+              font-weight: normal
+              font-size: 14px
+              line-height: 23px
+              color: $planBenefitsRed
+        .prof_plans_bottom_buyButtonContainer
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          width: 100%
+          height: 40px
+@media screen and ( max-width: 1170px )
+  .prof_plans_mainBlock
+    width: 330px
+    overflow: hidden
+    background-color: $mainBackground
+    .scrollContainer
+      display: flex
+      .arrow_left, .arrow_right
+        display: flex
+    .c
+      transform: translate(0, 0)
+    .l
+      transform: translate(-325px, 0)
+    .r
+      transform: translate(325px, 0)
+@media screen and ( max-width: 1000px )
+  .prof_plans_mainBlock
+    .scrollContainer
+      .arrow_left
+        left: 110px
+@media screen and ( max-width: 850px )
+  .prof_plans_mainBlock
+    .scrollContainer
+      .arrow_left
+        left: 80px
+      .arrow_right
+        right: 80px
+@media screen and ( max-width: 750px )
+  .prof_plans_mainBlock
+    .scrollContainer
+      .arrow_left
+        left: 65px
+      .arrow_right
+        right: 65px
+@media screen and ( max-width: 650px )
+  .prof_plans_mainBlock
+    .scrollContainer
+      .arrow_left, .arrow_right
+        img
+          max-width: 50px
+          max-height: 50px
+      .arrow_left
+        left: 35px
+      .arrow_right
+        right: 35px
+@media screen and ( max-width: 650px )
+  .prof_plans_mainBlock
+    .scrollContainer
+      .arrow_left
+        left: 40px
+      .arrow_right
+        right: 40px
+@media screen and ( max-width: 600px )
+  .prof_plans_mainBlock
+    .scrollContainer
+      .arrow_left
+        left: 20px
+      .arrow_right
+        right: 20px
+@media screen and ( max-width: 550px )
+  .prof_plans_mainBlock
+    // margin-top: 60px
+    .scrollContainer
+      width: calc(100% - 40px)
+      height: 30px
+      .scrollNumber
+        width: 30px
+        height: 30px
+      .arrow_left, .arrow_right
+        position: static
+        top: 0
+        left: 0
+        right: 0
+        margin-left: 0
+        margin-right: 0
+        img
+          max-width: 25px
+          max-height: 25px
+@media screen and ( max-width: 450px )
+  .prof_plans_mainBlock
+    .scrollContainer
+      .arrow_left, .arrow_right
+        top: 160px

@@ -1,0 +1,592 @@
+@import "../../../App"
+
+.UploadPageContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: calc(100vw - 200px)
+  height: 100vh
+
+
+  .unseen_back_button_block
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    width: calc(100% - 50px)
+    padding: 0 25px
+    height: 50px
+    min-height: 20px
+    // border: 1px solid black
+    a
+      display: flex
+      flex-direction: row
+      text-decoration: none
+      .unseen_back_arrow
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+      .unseen_back_text
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-left: 3px
+        font-family: $fontMain
+        font-style: normal
+        font-weight: bolder
+        font-size: 13px
+        text-transform: uppercase
+        cursor: pointer
+        color: #919191
+
+
+  .synchronize_page_main_block
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-width: 400px
+    width: calc(100% - 200px)
+    max-width: 1800px
+    min-height: 400px
+    height: 700px
+    // border: 1px solid black
+    .synchronize_page_left_container
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      width: 70%
+      height: 100%
+      margin-left: 20px
+      // border: 1px solid black
+      .product_all_center_icon
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        width: 250px
+        padding: 10px 0
+        height: 110px
+        min-height: 70px
+        // border: 1px solid red
+        .center_icon_name
+          padding-top: 10px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: normal
+          font-size: 30px
+          line-height: 30px
+          text-align: center
+          color: #000000
+        .center_icon_description
+          padding-top: 5px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: normal
+          font-size: 11px
+          line-height: 10px
+          text-align: center
+      .synchronize_image_formats
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        width: 100%
+        height: 50px
+        font-family: $fontMain
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 23px
+        text-transform: uppercase
+        color: #555555
+        // border: 1px solid black
+
+
+
+      .synchronize_items_container
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: flex-start
+        justify-content: flex-start
+        width: 100%
+        height: auto
+        // border: 1px solid black
+        .synchronize_items
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          height: 100px
+          min-width: 140px
+          width: calc((100% / 5) - 20px)
+          margin: 10px 5px
+          background-color: white
+          cursor: pointer
+          // border: 1px solid black
+          .synchronize_item_icon
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 50px
+            max-width: 50px
+            height: 50px
+            max-height: 50px
+            img
+              width: 35px
+              height: 35px
+          .synchronize_item_name
+            font-family: $fontMain
+            font-style: normal
+            font-weight: bold
+            font-size: 12px
+            letter-spacing: 0.5px
+            line-height: 23px
+            color: #000000
+
+    //border: 1px solid black
+
+
+    .synchronize_page_right_upload_container
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      justify-content: flex-start
+      width: 28%
+      height: 100%
+      margin-right: 20px
+      // border: 1px solid black
+
+
+      .product_all_right_icon
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        min-width: 80px
+        width: 200px
+        max-width: 100%
+        padding: 10px 0
+        height: 110px
+        min-height: 70px
+        // border: 1px solid red
+        .right_icon_name
+          padding-top: 10px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: normal
+          font-size: 30px
+          line-height: 30px
+          text-align: center
+          color: #000000
+        .right_icon_description
+          padding-top: 5px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: normal
+          font-size: 11px
+          line-height: 10px
+          text-align: center
+          color: rgba(0, 0, 0, 0.49)
+
+      .synchronize_item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin-top: 60px
+        min-width: 80px
+        width: 200px
+        max-width: 100%
+        height: 100px
+        background-color: white
+        cursor: pointer
+        .synchronize_item_icon
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 50px
+          max-width: 50px
+          height: 50px
+          max-height: 50px
+          img
+            width: 35px
+            height: 35px
+        .synchronize_item_name
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 12px
+          letter-spacing: 0.5px
+          line-height: 23px
+          color: #000000
+
+  .synchronize_page_upload_popup
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 0
+    margin: 0
+    min-height: 100vh
+    height: 100vh
+    max-height: 100vh
+    min-width: 100vw
+    width: 100vw
+    max-width: 100vw
+    background-color: rgba(0, 0, 0, .21)
+    z-index: 20
+  .synchronize_page_shopify_popup
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 0
+    margin: 0
+    min-height: 100vh
+    height: 100vh
+    max-height: 100vh
+    min-width: 100vw
+    width: 100vw
+    max-width: 100vw
+    background-color: rgba(0, 0, 0, .21)
+    z-index: 20
+    .shopify_container
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      width: 410px
+      height: 175px
+      padding: 0 15px 10px 15px
+      background: white
+      border-radius: 10px
+      .shopifyInput, .shopifybutton
+        display: flex
+        align-items: center
+        justify-content: center
+      .shopifyHeader
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 95%
+        height: 60px
+        .shopifyHeaderText
+          font-family: $fontMain
+          font-style: normal
+          font-weight: normal
+          font-size: 25px
+          line-height: 59px
+          text-align: center
+          color: #000000
+        .shopifyHeaderIcon
+          display: flex
+          align-items: center
+          justify-content: center
+          height: 100%
+          width: 30px
+          cursor: pointer
+          svg
+            height: 15px
+            width: 15px
+      .shopifyInput
+        width: 100%
+        height: 25px
+        padding-top: 25px
+        margin-bottom: 20px
+      .shopifybutton
+        height: 35px
+        width: 160px
+
+@media screen and ( max-width: 1500px )
+  .UploadPageContainer
+    .unseen_back_button_block
+    .synchronize_page_main_block
+      width: calc(100% - 100px)
+
+
+@media screen and ( max-width: 1400px )
+  .UploadPageContainer
+    .unseen_back_button_block
+    .synchronize_page_main_block
+      width: 100%
+
+@media screen and ( max-width: 1250px )
+  .UploadPageContainer
+    .unseen_back_button_block
+    .synchronize_page_main_block
+      .synchronize_page_left_container
+        .synchronize_image_formats
+          height: 40px
+        .product_all_center_icon
+          height: 90px
+          .center_icon
+            img
+              width: 50px
+              height: 50px
+          .center_icon_name
+            font-size: 25px
+            padding-top: 0
+          .center_icon_description
+            padding-top: 0
+      .synchronize_page_right_upload_container
+        .product_all_right_icon
+          height: 90px
+          .right_icon
+            img
+              width: 50px
+              height: 50px
+          .right_icon_name
+            font-size: 25px
+            padding-top: 0
+          .right_icon_description
+            padding-top: 0
+        .synchronize_item
+          margin-top: 50px
+
+
+@media screen and ( max-width: 1100px )
+  .UploadPageContainer
+    .unseen_back_button_block
+    .synchronize_page_main_block
+      .synchronize_page_left_container
+        .synchronize_image_formats
+          height: 30px
+      .synchronize_page_right_upload_container
+        .synchronize_item
+          margin-top: 40px
+          .synchronize_item_icon
+          .synchronize_item_name
+@media screen and ( max-width: 1000px )
+  .UploadPageContainer
+    width: calc(100vw - 50px)
+    .unseen_back_button_block
+      width: calc(100vw - 20px)
+      margin: 3px 0 0 20px
+      height: 30px
+      a
+        .unseen_back_arrow
+          img
+              width: 30px
+              height: 15px
+        .unseen_back_text
+          padding-left: 4px
+          font-size: 12px
+        .unseen_back_arrow
+        .unseen_back_text
+    .synchronize_page_main_block
+      .synchronize_page_left_container
+        .product_all_center_icon
+          height: 90px
+          .center_icon
+            img
+              width: 45px
+              height: 45px
+          .center_icon_name
+            font-size: 20px
+            padding-top: 2px
+          .center_icon_description
+            font-size: 10px
+            padding-top: 5px
+      .synchronize_page_right_upload_container
+        .product_all_right_icon
+          height: 90px
+          .right_icon
+            img
+              width: 45px
+              height: 45px
+          .right_icon_name
+            font-size: 20px
+            padding-top: 2px
+          .right_icon_description
+            font-size: 10px
+            padding-top: 5px
+@media screen and ( max-width: 800px)
+  .UploadPageContainer
+    .unseen_back_button_block
+    .synchronize_page_main_block
+      width: 100vw
+      justify-content: space-between
+      .synchronize_page_left_container
+        margin-left: 10px
+        .product_all_center_icon
+          height: 80px
+          // min-height: 70px
+          .center_icon
+            img
+              width: 40px
+              height: 40px
+          .center_icon_name
+        .synchronize_image_formats
+          font-size: 11px
+        .synchronize_items_container
+          a
+
+            .synchronize_items
+              height: 80px
+              width: 130px
+      .synchronize_page_right_upload_container
+        margin-right: 10px
+        min-width: 120px
+        width: 180px
+        max-width: 180px
+        .product_all_right_icon
+          height: 80px
+          .right_icon
+            img
+              width: 40px
+              height: 40px
+          .right_icon_name
+            padding-top: 0
+        .synchronize_item
+          height: 100px
+@media screen and (max-width: 700px)
+  .UploadPageContainer
+    .unseen_back_button_block
+      margin-left: 0
+    .synchronize_page_main_block
+      .synchronize_page_left_container
+        .product_all_center_icon
+          .center_icon
+            img
+              width: 35px
+              height: 35px
+        .synchronize_image_formats
+          font-size: 10px
+      .synchronize_page_right_upload_container
+        min-width: 100px
+        width: 140px
+        max-width: 140px
+        .product_all_right_icon
+          .right_icon
+            img
+              width: 35px
+              height: 35px
+@media screen and (max-width: 550px)
+  .UploadPageContainer
+    .synchronize_page_main_block
+      .synchronize_page_left_container
+        .synchronize_image_formats
+          height: 40px
+          line-height: 15px
+          font-size: 9px
+        .synchronize_items_container
+          a
+            height: 80px
+      .synchronize_page_right_upload_container
+        min-width: 100px
+        width: 120px
+        max-width: 120px
+        .synchronize_item
+          margin-top: 50px
+@media screen and (max-width: 440px)
+  .UploadPageContainer
+    .synchronize_page_main_block
+      .synchronize_page_left_container
+        min-width: 275px
+        .synchronize_image_formats
+          height: 40px
+          line-height: 15px
+          font-size: 9px
+        .synchronize_items_container
+          .synchronize_items
+            height: 80px
+            min-width: 100px
+            width: 100px
+        .synchronize_items_container
+          a
+            margin: 5px 12px
+            height: 80px
+            min-width: 110px
+            width: 110px
+            max-width: 110px
+      .synchronize_page_right_upload_container
+        min-width: 100px
+        width: 120px
+        max-width: 120px
+        .synchronize_item
+          // margin-top: 55px
+          min-width: 80px
+          width: 110px
+          height: 80px
+@media screen and (max-width: 400px)
+  .UploadPageContainer
+    .synchronize_page_main_block
+      max-width: calc(100vw - 20px)
+      width: calc(100vw - 20px)
+      min-width: calc(100vw - 20px)
+      .synchronize_page_left_container
+        min-width: 200px
+        width: 200px
+        .synchronize_image_formats
+          height: 40px
+          line-height: 15px
+          font-size: 9px
+        .synchronize_items_container
+          .synchronize_items
+            height: 80px
+            min-width: 100px
+            width: 100px
+        .synchronize_items_container
+          justify-content: center
+          a
+            margin: 5px 12px
+            height: 80px
+            min-width: 110px
+            width: 110px
+            max-width: 110px
+      .synchronize_page_right_upload_container
+        min-width: 100px
+        width: 120px
+        max-width: 120px
+        .synchronize_item
+          // margin-top: 55px
+          min-width: 80px
+          width: 110px
+          height: 80px
+@media screen and (max-width: 340px)
+  .UploadPageContainer
+    .synchronize_page_main_block
+      max-width: calc(100vw - 10px)
+      width: calc(100vw - 10px)
+      min-width: calc(100vw - 10px)
+      .synchronize_page_left_container
+        min-width: 130px
+        width: 200px
+        .synchronize_image_formats
+          height: 40px
+          line-height: 15px
+          font-size: 9px
+        .synchronize_items_container
+          .synchronize_items
+            height: 80px
+            min-width: 100px
+            width: 100px
+        .synchronize_items_container
+          justify-content: center
+          a
+            margin: 5px 12px
+            height: 80px
+            min-width: 110px
+            width: 110px
+            max-width: 110px
+      .synchronize_page_right_upload_container
+        min-width: 100px
+        width: 120px
+        max-width: 120px
+        .synchronize_item
+          // margin-top: 55px
+          min-width: 80px
+          width: 110px
+          height: 80px
+
+

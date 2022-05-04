@@ -1,0 +1,166 @@
+.DonutsChart 
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    height: 420px
+    max-height: 420px
+    width: 400px
+    /* margin: 10px 0 0 0 */
+.pie_block 
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 300px
+    height: 360px
+    min-width: 330px
+    width: 390px
+    margin: 10px 0 20px 0
+
+#first-pie-container, #second-pie-container, #third-pie-container 
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 300px
+    height: 360px
+    min-width: 300px
+    width: 360px
+    position: absolute
+    z-index: 10
+
+.pie_text 
+    font-family: 'Cambay', sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 30px
+    text-align: center
+    color: #007890
+
+.pie_text_over 
+    display: flex
+    font-size: 50px
+    font-family: 'Cambay', sans-serif
+
+.pie_d_center_content 
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 310px
+    min-width: 310px
+    height: 310px
+    min-height: 310px
+    border-radius: 50%
+    overflow: hidden
+    background-color: #E9F0F3
+    z-index: 1
+    margin-left: 15px
+
+.pie_d_center_text 
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: 'Cambay', sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 39px
+    text-transform: uppercase
+    color: black
+
+.pie_d_center_description 
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    width: 210px
+    height: 50px
+    padding: 0 10px
+    text-align: center
+    font-family: 'Cambay', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 20px
+    color: #000
+
+.sliceLegends 
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    top: 0
+    justify-content: space-evenly
+    width: 360px
+    min-width: 360px
+    bottom: 0
+    height: 60px
+    position: relative
+
+.sliceItems 
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    height: 20px
+    width: auto
+    min-width: 70px
+    margin-bottom: 5px
+
+.sliceDots 
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 20px
+    height: 20px
+
+.sliceDot 
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 7px
+    max-width: 7px
+    height: 7px
+    max-height: 7px
+    border-radius: 50%
+    background: rebeccapurple
+
+.sliceText 
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: 'Cambay', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 11px
+    line-height: 26px
+    text-transform: uppercase
+    color: #000000
+
+
+.tooltip 
+    position: absolute
+    pointer-events: none
+    display: none
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    min-width: 120px
+    height: 20px
+    border: 1px solid rgba(0,0,0, .1)
+    border-radius: 5px
+    background: #fff
+    box-shadow: 0 4px 4px rgba(37, 64, 66, 0.06)
+    z-index: 30
+    padding: 2px 10px
+    font-family: 'Cambay', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 17px
+    line-height: 29px
+
+@media screen and (max-width: 1600px)
+    .DonutsChart
+        width: 370px
+        height: 390px
+        min-width: 320px
+        min-height: 340px

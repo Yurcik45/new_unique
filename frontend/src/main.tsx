@@ -1,0 +1,53 @@
+export interface ForProps {
+    type?: string,
+    className?: string,
+    placeholder?: string,
+    name?: string,
+    autoComplete?: string,
+    label?: string,
+    width?: string,
+    minWidth?: string,
+    height?: string,
+    minHeight?: string,
+    maxHeight?: string,
+    pattern?: string,
+    mask?: string,
+    icon?: string,
+    disabled?: boolean,
+    fontStyle?: string,
+    value?: string,
+    backgroundColor?: string
+    mainOption?: string
+    options?: any[],
+    uppercase?: boolean,
+    buttonType?: string,
+    customInputItems?: any[],
+    customInputIcon?: any,
+    onChange?: (value: string) => void,
+    inputItems?: string[],
+    setInputItems?: any,
+    onClick?: (e: any) => void,
+    pushNewWhitelistItem?: string | any,
+    mainInputEvent?: string | any,
+    mainInputClickEvent?: string | any,
+    mainInputKeyClickEvent?: string | any,
+    mainButtonClicked?: string | any,
+    mainSelect?: string | any,
+    bccElementsHandler?: (e: string[]) => void,
+    mainOptionName?: string,
+    styles?: any,
+    color?: string,
+    ref?: any,
+    fontSize?: string,
+    border?: string,
+    buttonIcon?: any,
+    borderRadius?: string,
+    textTransform?: string
+}
+
+export interface mainPopup {
+    popup?: boolean,
+    setPopup?: any,
+    popupSettings?: any,
+    setPopupSettings?: any
+}

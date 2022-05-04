@@ -1,0 +1,108 @@
+@import "../../../App"
+
+.MainSelectContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+  height: 70px
+  .MainSelectLabel
+    display: flex
+    align-items: flex-start
+    left: 0
+    width: 100%
+    height: 20px
+    margin: 5px 0
+    color: $grayFontColor
+    font-family: $fontMain
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 23px
+    text-transform: uppercase
+  .selectBlock
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-width: 100%
+    width: 100%
+    height: 50px
+    background: white
+    border: 1px solid $inputBorderGray
+    box-sizing: border-box
+    border-radius: 10px
+    outline: none
+    //margin: 0 auto
+    padding: 10px 15px
+    font-family: $fontMain
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 23px
+    color: #757575
+    cursor: pointer
+    .selectedText
+      display: flex
+      align-items: center
+      justify-content: center
+      svg
+        margin-right: 15px
+.selectOptionsContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-width: calc(100% - 2px)
+  max-width: calc(100% - 2px)
+  min-height: 55px
+  padding: 10px 0
+  overflow: overlay
+  height: auto
+  background-color: white
+  color: black
+  margin-top: -7px
+  border-top: none
+  border-left: 1px solid #e3e3e3
+  border-right: 1px solid #e3e3e3
+  border-bottom: 1px solid #e3e3e3
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
+  overflow: hidden
+  z-index: 1
+  // border: 1px solid black
+  .selectItem
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    min-height: 30px
+    padding: 3px 0
+    margin: 2px 0
+    // border: 1px solid black
+    .selectItemIcon
+      margin-left: 15px
+    .selectItemText
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      padding: 0 20px 0 10px
+      font-family: $fontMain
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 23px
+      color: #000000
+    &:hover
+      cursor: pointer
+      background-color: $mainColor
+      .selectItemText
+        color: white
+@media screen and ( max-width: 1100px )
+  .MainSelectContainer
+    height: 65px
+    .MainSelectLabel
+    .selectBlock
+      height: 40px
+      font-size: 12px
+
+  

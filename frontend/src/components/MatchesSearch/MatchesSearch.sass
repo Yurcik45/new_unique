@@ -1,0 +1,109 @@
+@import "../../App"
+
+.MatchesSearchContainer
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  height: 50px
+  min-width: 400px
+  width: calc( 100% - 40px)
+  max-width: 1300px
+  margin: 10px auto
+  border-radius: 5px
+  background: #dedff6
+
+  .searchInput
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    height: 100%
+    width: calc(100% - 5px)
+    margin: auto 0 auto 5px
+    font-family: $fontMain
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 29px
+    color: #878787
+    .MainInputContainer
+      justify-content: center
+    .marchesSearchIcon
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 50px
+      width: 40px
+      position: absolute
+      cursor: pointer
+      z-index: 1
+
+  .questionBlock
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 45px
+    width: 50px
+    margin: 0 3px
+    cursor: pointer
+    .questionItemBorder
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 87%
+      height: 87%
+      background: rgba(0, 120, 144, 0.13)
+      border-radius: 12px
+      margin: 0 auto
+      .questionItem
+        display: flex
+        align-items: center
+        justify-content: center
+        font-family: 'Roboto', sans-serif
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 15px
+        color: #FFFFFF
+        background-color: $mainColor
+        border-radius: 10px
+        width: 77%
+        height: 77%
+        margin: 0 auto
+@media screen and ( max-width: 1100px )
+  .MatchesSearchContainer
+    height: 45px
+    .searchInput
+      .marchesSearchIcon
+    .questionBlock
+      height: 41px
+      width: 44px
+      margin: 0 3px
+      .questionItemBorder
+        .questionItem
+          font-size: 14px
+@media screen and ( max-width: 600px )
+  .MatchesSearchContainer
+    height: 33px
+    min-width: 250px
+    width: calc(100% - 10px)
+    .searchInput
+      .MainInputContainer
+        min-height: 28px
+        border-radius: 5px
+      .marchesSearchIcon
+        height: 20px
+        width: 30px
+        svg
+          height: 12px
+          width: 12px 
+    .questionBlock
+      height: 32px
+      width: 32px
+      margin: 0 3px
+      .questionItemBorder
+        border-radius: 8px
+        .questionItem
+          font-size: 13px
+          border-radius: 6px
+  

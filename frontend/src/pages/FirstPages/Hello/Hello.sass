@@ -1,0 +1,35 @@
+@import "../../../App"
+
+.HelloPage
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100vw
+  height: calc(100vh - 50px)
+  background-color: $mainBackground
+  .helloContainer
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    width: 350px
+    height: 380px
+    .helloImage
+      width: 260px
+      height: 200px
+      background-image: url("../../../assets/images/violetMainLogo.svg")
+      background-position: center
+      background-repeat: no-repeat
+      margin: 0 auto
+    a
+      text-decoration: none
+
+@media screen and (max-width: 500px)
+  .HelloPage
+    width: 100vw
+    height: calc(100vh - 100px)
+    .helloContainer
+      width: 340px
+      border: 1px solid black
+      .helloImage
+        background-size: 150px

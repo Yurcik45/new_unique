@@ -1,0 +1,777 @@
+@import "../../../App"
+
+.ImagesMatchPage
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: calc(100vw - 200px)
+  max-width: calc(100vw - 200px)
+  min-height: 100%
+  .ImagesMatchMainContainer
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    width: 100%
+    max-width: 1400px
+    height: 400px
+    // border: 1px solid black
+    .images_match_container
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      margin: 20px 30px
+      height: 100%
+      min-height: 300px
+      // border: 1px solid red
+      .images_match_arrow_block
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        height: 100%
+        width: 70px
+        img
+          cursor: pointer
+          width: 40px
+          height: 40px
+        .match_arrow_text
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 10px
+          line-height: 23px
+          text-transform: uppercase
+          color: #919191
+      .images_match_main_block
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        width: 75%
+        height: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .images_menu_bar_container
+          display: flex
+          flex-direction: row
+          align-items: center
+          justify-content: space-between
+          width: calc(100% - 20px)
+          padding: 10px
+          height: 50px
+          border: 1px solid #E0E6E7
+          border-radius: 5px
+
+
+
+          .menu_bar_left_container
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            justify-content: space-between
+            width: auto
+            height: 100%
+            .menu_arrow
+              display: flex
+              align-items: center
+              justify-content: center
+              min-width: 30px
+              width: 30px
+              height: 100%
+              img
+                width: 100%
+                height: 17px
+            .menu_matches_name_container
+              display: flex
+              flex-direction: row
+              align-items: flex-start
+              justify-content: center
+              width: auto
+              height: 100%
+              .menu_count_matches
+                display: flex
+                align-items: center
+                justify-content: center
+                min-width: 70px
+                width: 70px
+                height: 100%
+                font-family: $fontMain
+                font-style: normal
+                font-weight: bold
+                font-size: 10px
+                line-height: 23px
+                text-transform: uppercase
+                color: #919191
+              .menu_image_name
+                display: flex
+                align-items: center
+                justify-content: center
+                min-width: 100px
+                width: 100px
+                height: 100%
+                font-family: $fontMain
+                font-style: normal
+                font-weight: normal
+                font-size: 18px
+                line-height: 39px
+                text-align: center
+                color: #000000
+
+
+
+
+          .menu_bar_right_container
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: flex-end
+            width: auto
+            height: 100%
+            .menu_action
+              display: flex
+              flex-direction: column
+              align-items: center
+              justify-content: center
+              min-width: 70px
+              width: 70px
+              height: 100%
+              padding-top: 5px
+              img
+                width: 18px
+                height: 16px
+              .action_text
+                font-family: $fontMain
+                font-style: normal
+                font-weight: bold
+                font-size: 10px
+                line-height: 20px
+                text-transform: uppercase
+                color: #48519D
+            .menu_buttons
+              display: flex
+              align-items: center
+              justify-content: space-between
+              min-width: 240px
+              width: 240px
+              height: 40px
+
+
+
+        .images_match_bottom_block
+          display: flex
+          align-items: center
+          justify-content: space-between
+          width: 100%
+          height: 280px
+          margin-top: 40px
+          border: 1px solid #E0E6E7
+          border-radius: 5px
+          .match_bottom_block_image
+            display: flex
+            align-items: center
+            justify-content: center
+            min-width: 180px
+            width: 240px
+            height: 240px
+            margin: 20px 10px 20px 20px
+            background-image: url("../../../assets/images/unseenPhotoExample.png")
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+          .match_bottom_block_descriptions_container
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            width: 520px
+            height: 240px
+            margin: 20px 20px 20px 10px
+            .match_bottom_block_information_container
+              display: flex
+              align-items: center
+              justify-content: space-between
+              width: 100%
+              height: 155px
+              .information_container_first_seen
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: flex-start
+                width: 120px
+                height: 100%
+                .information_container_header
+                  width: 110px
+                  height: 20px
+                  font-family: $fontMain
+                  font-style: normal
+                  font-weight: bold
+                  font-size: 11px
+                  line-height: 18px
+                  text-transform: uppercase
+                  color: #919191
+                .information_container_text
+                  width: 110px
+                  height: 20px
+                  font-family: $fontMain
+                  font-style: normal
+                  font-weight: normal
+                  font-size: 10px
+                  line-height: 20px
+                  color: #000000
+              .information_container_other_description
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-between
+                width: 380px
+                height: 100%
+                .information_other_item
+                  display: flex
+                  flex-direction: column
+                  align-items: center
+                  justify-content: space-between
+                  width: 96%
+                  height: 45px
+                  .information_container_header
+                    width: 100%
+                    height: 18px
+                    font-family: $fontMain
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 11px
+                    line-height: 18px
+                    text-transform: uppercase
+                    color: #919191
+                  .information_container_text
+                    width: 100%
+                    height: 23px
+                    font-family: $fontMain
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 10px
+                    line-height: 10px
+                    color: #000000
+                    overflow-x: scroll
+            .match_bottom_block_button_container
+              display: flex
+              flex-direction: column
+              align-items: flex-start
+              justify-content: space-between
+              width: 100%
+              height: 75px
+              .button_container_single_match
+                display: flex
+                align-items: center
+                justify-content: space-evenly
+                width: 65%
+                height: 20px  
+                padding-top: 8px
+                .single_math_line
+                  display: flex
+                  align-items: center
+                  justify-content: center
+                  height: 1px
+                  width: 100px
+                  background-color: #EDEDED
+                .single_math_text
+                  min-width: 110px
+                  font-family: $fontMain
+                  font-style: normal
+                  font-weight: bold
+                  font-size: 10px
+                  line-height: 23px
+                  text-align: center
+                  text-transform: uppercase
+                  color: #7e7e7e
+              .button_container_buttons
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 65%
+                height: 35px
+
+
+
+
+
+@media screen and ( max-width: 1300px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      .images_match_container
+        .images_match_main_block
+
+
+          .images_menu_bar_container
+            .menu_bar_left_container
+              .menu_arrow
+                img
+              .menu_matches_name_container
+                .menu_count_matches
+                .menu_image_name
+            .menu_bar_right_container
+              .menu_action
+                img
+                .action_text
+              .menu_buttons
+
+
+
+          .images_match_bottom_block
+            .match_bottom_block_image
+            .match_bottom_block_descriptions_container
+              .match_bottom_block_information_container
+                flex-direction: column
+                align-items: flex-start
+                height: 170px
+                .information_container_first_seen
+                  flex-direction: row
+                  width: 200px
+                  margin-left: 5px
+                  height: 15px
+                .information_container_other_description
+                  height: 155px
+                  width: 100%
+                .match_bottom_block_button_container
+@media screen and ( max-width: 1200px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      .images_match_container
+        .images_match_main_block
+
+          .images_menu_bar_container
+            .menu_bar_left_container
+              .menu_arrow
+                img
+              .menu_matches_name_container
+                .menu_count_matches
+                  font-size: 9px
+                  min-width: 60px
+                  width: 60px
+                .menu_image_name
+                  font-size: 16px
+                  min-width: 90px
+                  width: 90px
+            .menu_bar_right_container
+              .menu_action
+                img
+                .action_text
+              .menu_buttons
+@media screen and ( max-width: 1100px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      .images_match_container
+        .images_match_main_block
+
+          .images_menu_bar_container
+            .menu_bar_left_container
+              .menu_arrow
+                min-width: 25px
+                width: 25px
+                img
+              .menu_matches_name_container
+                .menu_count_matches
+                  font-size: 8px
+                  min-width: 55px
+                  width: 55px
+                .menu_image_name
+                  font-size: 15px
+                  min-width: 85px
+                  width: 85px
+            .menu_bar_right_container
+              .menu_action
+                min-width: 65px
+                width: 65px
+                img
+                  width: 17px
+                  height: 15px
+                .action_text
+                  font-size: 9px
+              .menu_buttons
+                min-width: 200px
+                width: 200px
+                button
+                  font-size: 8px !important
+@media screen and ( max-width: 1000px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      min-height: 400px
+      height: 400px
+      margin-bottom: 20px
+      width: 100vw
+      .images_match_container
+        height: 100%
+        .images_match_main_block
+
+
+
+          .images_menu_bar_container
+            .menu_bar_left_container
+              .menu_arrow
+                min-width: 30px
+                width: 30px
+                img
+              .menu_matches_name_container
+                .menu_count_matches
+                  font-size: 10px
+                  min-width: 70px
+                  width: 70px
+                .menu_image_name
+                  font-size: 18px
+                  min-width: 100px
+                  width: 100px
+            .menu_bar_right_container
+              .menu_action
+                min-width: 70px
+                width: 70px
+                img
+                  width: 18px
+                  height: 16px
+                .action_text
+                  font-size: 10px
+              .menu_buttons
+                min-width: 240px
+                width: 240px
+                button
+                  font-size: 10px !important
+@media screen and ( max-width: 900px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      .images_match_container
+        .images_match_main_block
+
+          .images_menu_bar_container
+            .menu_bar_left_container
+              .menu_arrow
+                min-width: 25px
+                width: 25px
+                img
+              .menu_matches_name_container
+                .menu_count_matches
+                  font-size: 8px
+                  min-width: 55px
+                  width: 55px
+                .menu_image_name
+                  font-size: 15px
+                  min-width: 85px
+                  width: 85px
+            .menu_bar_right_container
+              .menu_action
+                min-width: 65px
+                width: 65px
+                img
+                  width: 17px
+                  height: 15px
+                .action_text
+                  font-size: 9px
+              .menu_buttons
+                min-width: 200px
+                width: 200px
+                button
+                  font-size: 8px !important
+@media screen and ( max-width: 800px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      min-height: 400px
+      height: 400px
+      .images_match_container
+        .images_match_main_block
+
+
+
+          .images_menu_bar_container
+            .menu_bar_left_container
+              .menu_arrow
+                min-width: 25px
+                width: 25px
+                img
+              .menu_matches_name_container
+                .menu_count_matches
+                  font-size: 8px
+                  min-width: 55px
+                  width: 55px
+                .menu_image_name
+                  font-size: 15px
+                  min-width: 85px
+                  width: 85px
+            .menu_bar_right_container
+              .menu_action
+                margin-right: 10px
+                min-width: 65px
+                width: 65px
+                img
+                  width: 17px
+                  height: 15px
+                .action_text
+                  font-size: 9px
+              .menu_buttons
+                flex-direction: column
+                min-width: 100px
+                width: 100px
+                height: 55px
+                button
+                  width: 100% !important
+                  height: 25px !important
+                  font-size: 9px !important
+
+
+
+          .images_match_bottom_block
+            .match_bottom_block_image
+            .match_bottom_block_descriptions_container
+              align-items: flex-start
+              .match_bottom_block_information_container
+                flex-direction: column
+                align-items: flex-start
+                height: 170px
+                width: 280px
+                .information_container_first_seen
+                  flex-direction: row
+                  width: 100%
+                  margin-left: 5px
+                  height: 15px
+                .information_container_other_description
+                  height: 155px
+                  width: 100%
+              .match_bottom_block_button_container
+                width: 280px
+                .button_container_single_match
+                  width: 100%
+                .button_container_buttons
+                  width: 100%
+                  height: 30px
+@media screen and ( max-width: 750px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      min-height: 400px
+      height: 400px
+      .images_match_container
+        .images_match_main_block
+
+@media screen and ( max-width: 700px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      min-height: 620px
+      height: 620px
+      .images_match_container
+        height: 100%
+        .images_match_arrow_block
+          width: 50px
+          img
+            width: 30px
+            height: 30px
+        .images_match_main_block
+          min-width: 200px
+
+
+          .images_menu_bar_container
+            width: 130%
+            .menu_bar_left_container
+              .menu_arrow
+                min-width: 25px
+                width: 25px
+                img
+              .menu_matches_name_container
+                .menu_count_matches
+                  font-size: 8px
+                  min-width: 55px
+                  width: 55px
+                .menu_image_name
+                  font-size: 15px
+                  min-width: 85px
+                  width: 85px
+            .menu_bar_right_container
+              .menu_action
+                margin-right: 6px
+                min-width: 60px
+                width: 60px
+                img
+                  width: 16px
+                  height: 15px
+                .action_text
+                  font-size: 8px
+              .menu_buttons
+                flex-direction: column
+                min-width: 100px
+                width: 100px
+                height: 55px
+                button
+                  width: 100% !important
+                  height: 25px !important
+                  font-size: 9px !important
+
+
+
+
+
+
+
+
+          .images_match_bottom_block
+            flex-direction: column
+            align-items: flex-start
+            width: 100%
+            height: 200px
+            .match_bottom_block_image
+              min-height: 100%
+              max-width: 200px
+              margin: 0
+            .match_bottom_block_descriptions_container
+              height: 250px
+              width: 100%
+              margin: 15px 0 0 0
+              .match_bottom_block_information_container
+                flex-direction: column
+                align-items: flex-start
+                height: 170px
+                width: 100%
+                .information_container_first_seen
+                  flex-direction: row
+                  width: 200px
+                  margin-left: 10px
+                  height: 15px
+                .information_container_other_description
+                  height: 155px
+                  width: 100%
+              .match_bottom_block_button_container
+                width: 100%
+                margin: 0 auto
+                .button_container_single_match
+                  width: 100%
+                .button_container_buttons
+                  width: 100%
+                  height: 30px
+@media screen and ( max-width: 600px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      .images_match_container
+        .images_match_main_block
+          .images_menu_bar_container
+            .menu_bar_left_container
+              .menu_arrow
+                min-width: 20px
+                width: 20px
+            .menu_bar_right_container
+              .menu_action
+                margin-right: 6px
+                min-width: 60px
+                width: 60px
+                img
+                  width: 16px
+                  height: 15px
+                .action_text
+                  font-size: 8px
+              .menu_buttons
+                flex-direction: column
+                min-width: 100px
+                width: 100px
+                height: 55px
+                button
+                  width: 100% !important
+                  height: 25px !important
+                  font-size: 9px !important
+@media screen and ( max-width: 500px )
+  .ImagesMatchPage
+    .ImagesMatchMainContainer
+      .images_match_container
+        .images_match_arrow_block
+          width: 50px
+          img
+            width: 30px
+            height: 30px
+        .images_match_main_block
+          min-width: 200px
+
+
+
+          .images_menu_bar_container
+            .menu_bar_left_container
+              .menu_arrow
+                min-width: 20px
+                width: 20px
+
+
+              .menu_matches_name_container
+                flex-direction: column
+                .menu_count_matches
+                  height: 20px
+                  font-size: 7px
+                  min-width: 70px
+                  width: 70px
+                .menu_image_name
+                  height: 20px
+                  font-size: 13px
+                  min-width: 70px
+                  width: 70px
+
+              
+            .menu_bar_right_container
+              .menu_action
+                margin-right: 3px
+                min-width: 50px
+                width: 50px
+                img
+                  width: 20px
+                  height: 19px
+                .action_text
+                  font-size: 7px
+              .menu_buttons
+                flex-direction: column
+                min-width: 80px
+                width: 80px
+                height: 55px
+                button
+                  width: 100% !important
+                  height: 25px !important
+                  font-size: 7px !important
+
+
+
+
+          .images_match_bottom_block
+            flex-direction: column
+            align-items: center
+            width: 100%
+            height: 200px
+            .match_bottom_block_image
+              min-height: 100%
+              max-width: 200px
+              margin: 0
+            .match_bottom_block_descriptions_container
+              height: 250px
+              width: 100%
+              margin: 15px 0 0 0
+              .match_bottom_block_information_container
+                flex-direction: column
+                align-items: flex-start
+                height: 170px
+                width: 100%
+                .information_container_first_seen
+                  flex-direction: row
+                  width: 200px
+                  margin-left: 10px
+                  height: 15px
+                .information_container_other_description
+                  height: 155px
+                  width: 100%
+              .match_bottom_block_button_container
+                width: 100%
+                margin: 0 auto
+                .button_container_single_match
+                  width: 100%
+                .button_container_buttons
+                  width: 100%
+                  height: 30px

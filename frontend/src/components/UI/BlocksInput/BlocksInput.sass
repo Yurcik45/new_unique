@@ -1,0 +1,137 @@
+@import "../../../App"
+
+.MainBlockInputContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: 70px
+  .BlockInputLabel
+    display: flex
+    align-items: flex-start
+    width: 100%
+    height: 20px
+    margin-top: 5px
+    color: $grayFontColor
+    font-family: $fontMain
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 23px
+    text-transform: uppercase
+  .BlockInputContainer
+    display: flex
+    flex-direction: row
+    min-width: 200px
+    width: 346px
+    margin: 0 10px
+    height: 50px
+    align-items: center
+    justify-content: flex-start
+    overflow-x: overlay
+    overflow-y: hidden
+    background: $simpleBackground
+    border: 1px solid $inputBorderGray
+    border-radius: 10px
+
+
+    .BlockInputItemsContainer
+      display: flex
+      flex-direction: row
+      width: 100%
+      align-items: center
+      justify-content: space-between
+      height: 100%
+      max-height: 100%
+      margin-left: 5px
+      padding: 0 5px
+      border-radius: 5px
+      color: black
+      border: 1px solid $inputBorderGray
+      background: $simpleBackground
+  
+
+
+      .BlockInputItem
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 50px
+        width: calc( 100% - 40px )
+        height: 30px
+        padding: 0 10px
+      .BlockInputIcon
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 20px
+        height: 20px
+        color: black
+        cursor: pointer
+
+
+
+    .BlockInput
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 200px
+      width: 100%
+      max-width: 100%
+      height: 40px
+      min-height: 30px
+      max-height: 35px
+      background: white
+      border: 1px solid $inputBorderGray
+      outline: none
+      box-sizing: border-box
+      border-radius: 10px
+      padding: 0 10px
+      font-family: $fontMain
+      font-style: normal
+      font-weight: bold
+      font-size: 14px
+      line-height: 23px
+      color: $simpleBlack
+
+@media screen and ( max-width: 1200px )
+  .MainBlockInputContainer
+    height: 60px
+    .BlockInputLabel
+    .BlockInputContainer
+      height: 30px
+      .BlockInputItemsContainer
+        border-radius: 2px
+        .BlockInputItem
+          font-size: 15px
+        .BlockInputIcon
+          width: 15px
+          height: 15px
+      .BlockInput
+        height: 30px
+        margin: 0
+        padding: 7px 10px
+        border-radius: 5px
+        font-size: 12px
+@media screen and ( max-width: 600px )
+  .MainBlockInputContainer
+    height: 50px
+    .BlockInputLabel
+      margin-top: 0
+      height: 15px
+    .BlockInputContainer
+      height: 30px
+      .BlockInputItemsContainer
+        height: 25px
+          font-size: 13px
+        .BlockInputIcon
+          width: 13px
+          height: 13px
+      .BlockInput
+        height: 30px
+        margin: 0
+        padding: 5px 7px
+        font-size: 11px
+    .BlockInputItemsContainer + .BlockInput
+      margin-left: 5px

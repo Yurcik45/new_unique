@@ -1,0 +1,108 @@
+@import "../../../App"
+
+.RegisterPage
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100vw
+  height: calc(100vh - 50px)
+  max-height: calc(100vh - 50px)
+  min-height: 650px
+  padding-bottom: 50px
+  background-color: $mainBackground
+  .registerContainer
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    width: 350px
+    height: 680px
+    //border: 1px solid black
+    .registerImage
+      width: 260px
+      height: 200px
+      background-image: url("../../../assets/images/violetMainLogo.svg")
+      background-position: center
+      background-repeat: no-repeat
+      margin: 0 auto
+    .welcomeText
+      margin: 0 auto
+      width: 300px
+      font-family: $fontMain
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 39px
+      text-align: center
+      //border: 1px solid red
+      .additionalWelcomeText
+        font-family: $fontMain
+        font-style: normal
+        font-weight: bolder
+        font-size: 14px
+        line-height: 23px
+        color: #919191
+    .SelectItemContainer
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 310px
+      height: 50px
+      margin: 30px auto 10px auto
+    .additionalTextContainer
+      display: flex
+      flex-direction: column
+      width: 350px
+      //border: 1px solid red
+      height: 40px
+      align-items: center
+      justify-content: space-between
+      text-align: center
+      margin: 10px auto
+      .additionalText
+        display: flex
+        flex-direction: row
+        font-family: $fontMain
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 20px
+        text-align: center
+        color: #AAAAAA
+        .additionalTextBlue
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 12px
+          line-height: 20px
+          color: $mainColor
+          padding: 0 5px
+
+@media screen and (max-width: 500px)
+  .RegisterPage
+    width: 100vw
+    height: calc(100vh - 50px)
+    .registerContainer
+      width: 310px
+      height: 650px
+      .registerImage
+        width: 260px
+        height: 160px
+        background-size: 150px
+      .welcomeText
+        width: 300px
+        font-size: 20px
+        .additionalWelcomeText
+          font-size: 12px
+      .SelectItemContainer
+        width: 310px
+        height: 50px
+      .additionalTextContainer
+        width: 310px
+        height: 30px
+        margin: 10px auto
+        .additionalText
+          font-size: 11px
+          .additionalTextBlue
+            font-size: 11px
+            padding: 0 5px

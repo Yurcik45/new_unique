@@ -1,0 +1,183 @@
+@import "../../App"
+
+.DashboardGeneralPageContainer
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  height: 100vh
+  min-height: 100vh
+  min-width: calc(100% - 200px)
+  width: calc(100% - 200px)
+  margin-left: 200px
+  .dashboard_overview_mainBlock
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    width: 100vw
+    max-height: 100vh
+    .dashboard_setDates_block
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      width: calc(100% - 200px)
+      max-width: 1500px
+      margin: 0 100px
+      padding-bottom: 10px
+      height: 40px
+      .dashboard_setDates_check
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        width: 260px
+        height: 40px
+        .dashboard_setDates_check_text
+          display: flex
+          align-items: center
+          height: 40px
+          width: 80px
+          min-width: 80px
+          justify-content: flex-end
+          font-family: $fontMain
+          font-style: normal
+          font-weight: normal
+          font-size: 14px
+          line-height: 23px
+          color: #919191
+          font-stretch: extra-expanded
+        .dashboard_setCalendarData_block
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          height: 40px
+          width: 190px
+          .dashboard_setDates_calendar_image
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 20px
+            min-width: 30px
+            height: 40px
+          .dashboard_setDates_check_calendar
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 140px
+            min-width: 140px
+            max-width: 140px
+            height: 40px
+            font-family: $fontMain
+            font-style: normal
+            font-weight: bold
+            font-size: 14px
+            line-height: 20px
+            color: #48519D
+        .dashboard_calendar_arrow
+          display: flex
+          align-items: center
+          justify-content: center
+          height: 40px
+          width: 20px
+          min-width: 20px
+          &:hover
+            .dashboard_setDates_check_calendar
+              color: #01586d
+    .dashboard_lineChart_block
+      display: flex
+      justify-content: center
+      height: 200px
+      width: calc(100% - 200px)
+      max-width: 1500px
+      min-height: 200px
+      padding-bottom: 15px
+      overflow-x: scroll
+      overflow-y: hidden
+    .pie_Block
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 450px
+      width: calc(100% - 200px)
+      max-width: 1500px
+      min-height: 450px
+  .calendar
+    display: flex
+    position: relative
+    z-index: 1000
+    border-right: none
+    border-top-right-radius: 0 !important
+    border-bottom-right-radius: 0 !important
+  .customDatePicker
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    z-index: 20
+    width: 200px
+    height: 365px
+    background-color: white
+    border-left: none
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+
+@media screen and (max-width: 2500px)
+  .DashboardGeneralPageContainer
+    width: 100%
+    .dashboard_overview_mainBlock
+      width: 100%
+      .pie_Block
+        min-width: 1000px
+        max-width: 1500px
+      .dashboard_lineChart_block
+        min-width: 1000px
+        max-width: 1500px
+@media screen and (max-width: 1300px)
+  .DashboardGeneralPageContainer
+    height: 1650px
+    width: 100%
+    .dashboard_overview_mainBlock
+      width: 100%
+      .dashboard_setDates_block
+        width: calc(100% - 50px)
+        margin: 0 50px
+      .pie_Block
+        flex-direction: column
+        min-width: calc(100% - 50px)
+        max-width: 1300px
+        height: 1300px !important
+        min-height: 1300px !important
+      .dashboard_lineChart_block
+        min-width: calc(100% - 50px)
+        max-width: 1300px
+@media screen and (max-width: 1000px)
+  .DashboardGeneralPageContainer
+    min-height: calc(100vh - 60px)
+    min-width: 100vw
+    max-width: 100vw
+    margin-top: 60px
+    margin-left: 0
+@media screen and (max-width: 600px)
+  .DashboardGeneralPageContainer
+    .dashboard_overview_mainBlock
+      .dashboard_setDates_block
+        width: calc( 100% - 20px)
+        .dashboard_setDates_check
+          width: 250px
+          height: 30px
+          margin-top: 15px
+          .dashboard_setDates_check_text
+            font-size: 12px
+          .dashboard_setCalendarData_block
+            .dashboard_setDates_check_calendar
+              min-width: 100px
+              width: 120px
+              font-size: 12px
+          .dashboard_calendar_arrow
+            height: 30px
+            width: 15px
+      .pie_Block
+        width: calc( 100% - 25px)
+      .dashboard_lineChart_block
+        width: calc( 100% - 22px)

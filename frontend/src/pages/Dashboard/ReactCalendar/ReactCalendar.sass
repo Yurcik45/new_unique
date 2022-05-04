@@ -1,0 +1,77 @@
+@import "../../../App"
+
+.dashboard_custom_calendar_block
+  display: flex
+  position: absolute
+  margin-top: 400px
+  align-items: center
+  justify-content: center
+  z-index: 15
+  background-color: white
+  border-radius: 10px
+  .calendar
+    display: flex
+    position: relative
+    padding: 0
+    border-right: none
+    border-top-right-radius: 0 !important
+    border-bottom-right-radius: 0 !important
+  .dashboard_calendar_button_container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    height: 300px
+    width: 150px
+    padding-right: 15px
+
+@media screen and (max-width: 800px)
+  .dashboard_custom_calendar_block
+    width: 450px
+    height: 320px
+    margin-top: 180px
+    .calendar
+      width: 100%
+      max-height: 100%
+      min-height: calc(100% - 30px)
+      padding: 0 15px !important
+
+@media screen and (max-width: 600px)
+  .dashboard_custom_calendar_block
+    width: 420px
+    height: 320px
+    // margin-top: 150px
+    right: 45px
+    .calendar
+      width: 100%
+      max-height: 100%
+      min-height: calc(100% - 30px)
+      padding: 0
+      margin: 0
+    .Calendar
+      padding: 0 0 0 0 !important
+    .Calendar__section
+      width: 250px
+      padding: 0 15px
+@media screen and (max-width: 450px)
+  .dashboard_custom_calendar_block
+    width: 380px
+    height: 320px
+    right: 10px
+    .calendar
+      width: 100%
+      max-height: 100%
+      min-height: calc(100% - 30px)
+      padding: 0
+      margin: 0
+    .dashboard_calendar_button_container
+      height: 300px
+      width: 200px
+    .Calendar
+      // padding: 0 0 0 0 !important
+    .Calendar__sectionWrapper
+      width: 240px
+@media screen and ( max-width: 420px )
+  .dashboard_custom_calendar_block
+    right: 3
+  

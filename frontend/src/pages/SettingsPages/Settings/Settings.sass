@@ -1,0 +1,839 @@
+@import "../../../App"
+
+
+*
+  // border: 1px solid black
+
+.settings_main_block
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 1200px
+  height: 100%
+  margin: auto
+  background-color: $mainBackground
+
+
+
+  .settings_mainBlock_top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    min-width: 100%
+    height: 570px
+
+
+
+
+    .settings_top_left_block
+      display: flex
+      flex-direction: column
+      left: 0
+      justify-content: space-between
+      align-items: center
+      min-width: calc(50% - 40px)
+      max-width: calc(50% - 40px)
+      height: 100%
+      max-height: 100%
+      padding: 0 20px 0 20px
+      overflow: hidden
+      background-color: $mainBackground
+      .settings_reports_block
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        width: calc(100% - 40px)
+        padding: 20px 20px 20px 20px
+        margin: 20px 0 0 0
+        height: 270px
+        border: 1px solid rgba(100, 100, 100, 0.3)
+        border-radius: 5px
+        background-color: $simpleWhite
+
+
+        .settings_reports_block_items_contsiner
+          display: flex
+          flex-direction: column
+          width: 100%
+          height: 100%
+
+
+          .settings_reports_header
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            width: 100%
+            height: 40px
+            font-family: $fontMain
+            font-style: normal
+            font-weight: bold
+            font-size: 24px
+            line-height: 39px
+            color: #000000
+
+          .settings_reports_text
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            width: 100%
+            height: 20px
+            font-family: $fontMain
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 20px
+            color: #919191
+
+
+
+
+        .settings_reports_settings_block_container
+          display: flex
+          flex-direction: column
+          height: 150px
+          width: 100%
+          .settings_horizontalLine
+            display: flex
+            height: 1px
+            width: 100%
+            background-color: #E0E0E0
+          .settings_reports_settings_block
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            width: 100%
+            height: 50%
+            .settings_custom_button
+              display: flex
+              align-items: center
+              justify-content: center
+              width: 200px
+              height: 50px
+
+
+
+              .settingsCustomButton
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: center
+                width: 90px
+                height: 50px
+                border: none
+                outline: none
+                border-radius: 10px
+                background-color: #fcfcfc
+                overflow: hidden
+                box-shadow: 0 5px 7px rgba(37, 64, 66, 0.3)
+                font-family: $fontMain
+                font-style: normal
+                font-weight: bold
+                font-size: 14px
+                line-height: 23px
+                cursor: pointer
+                .customButtonON
+                  display: flex
+                  height: 70px
+                  width: 40px
+                  min-width: 40px
+                  align-items: center
+                  justify-content: center
+                  background-color: $mainColor
+                  transform: rotate(20deg)
+                  padding-left: 10px
+                  margin-bottom: 5px
+                  color: #FFFFFF
+                  box-shadow: inset 0 4px 8px rgba(37, 64, 66, 0.5)
+                  .customButtonONText
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    transform: rotate(-20deg)
+                .customButtonOFF
+                  display: flex
+                  align-items: center
+                  justify-content: center
+                  height: 50px
+                  width: 50px
+                  min-width: 50px
+                  margin-right: 5px
+                  overflow: hidden
+                  color: #909090
+                .customButtonLine
+                  display: flex
+                  align-items: center
+                  justify-content: center
+                  width: 1px
+                  max-width: 1px
+                  height: 52px
+                  max-height: 52px
+                  background-color: black
+                  transform: rotate(20deg)
+
+
+
+
+            .settings_reports_settings_block_text_items
+              display: flex
+              flex-direction: column
+              justify-content: flex-start
+              width: 100%
+              height: 60px
+              .settings_rep_set_header
+                display: flex
+                align-items: center
+                height: 50%
+                width: 100%
+                font-family: $fontMain
+                font-style: normal
+                font-weight: bold
+                font-size: 14px
+                line-height: 23px
+                color: #000000
+
+              .settings_rep_set_text
+                display: flex
+                align-items: center
+                height: 50%
+                width: 100%
+                font-family: $fontMain
+                font-style: normal
+                font-weight: bold
+                font-size: 14px
+                line-height: 23px
+                color: #919191
+
+
+
+
+
+
+
+
+      .settings_notifications_block
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: calc(100% - 40px)
+        padding: 20px
+        height: calc(100% - 70px)
+        margin: 30px 0 20px 0
+        border: 1px solid rgba(100, 100, 100, 0.3)
+        overflow: overlay
+        border-radius: 5px
+        background-color: $simpleWhite
+        .settings_notify_header
+          display: flex
+          width: 100%
+          height: 40px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 24px
+          line-height: 39px
+          color: #000000
+        .settings_notify_text
+          display: flex
+          width: 100%
+          height: 30px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 14px
+          line-height: 23px
+          text-transform: uppercase
+          color: #919191
+        .settings_notify_select
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 100%
+          height: 100px
+
+
+
+
+
+
+
+    .settings_top_right_block
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      min-width: calc(50% - 80px)
+      max-width: calc(50% - 80px)
+      height: calc(100% - 80px)
+      max-height: calc(100% - 80px)
+      padding: 20px
+      margin-right: 14px
+      border: 1px solid rgba(100, 100, 100, 0.3)
+      border-radius: 5px
+      background-color: $simpleWhite
+
+
+
+      .settings_top_right_header
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        height: 30px
+        width: 100%
+        padding: 0 0 10px 0
+        font-family: $fontMain
+        font-style: normal
+        font-weight: bold
+        font-size: 24px
+        line-height: 39px
+        color: #000000
+
+      .settings_top_right_whitelistBlock
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        width: 100%
+        height: 300px
+        overflow-y: overlay
+        border-top: 1px solid #E0E0E0
+
+        .settings_top_right_whitelistContainer    
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          left: 0
+          align-items: center
+          height: 20px
+          width: 100%
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 14px
+          line-height: 23px
+          color: #000000
+          padding: 10px 0
+          .settings_t_r_whiteList_items
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            width: 100%
+            height: 100%
+            margin-right: 7px
+            overflow-y: hidden
+            overflow-x: overlay
+            white-space: nowrap
+            align-items: center
+          .settings_top_right_whitelistIcon
+            cursor: pointer
+            padding-right: 5px
+
+      .settings_top_right_add_block
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        height: 50px
+        width: 100%
+        width: 100%
+        font-family: $fontMain
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 23px
+        color: #909090
+        .settings_t_r_add_block_input
+          height: 100%
+          width: 70%
+        .settings_t_r_add_block_button
+          height: 40px
+          width: 25%
+      .settings_top_right_description
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        height: 70px
+        width: calc( 100% - 20px )
+        font-family: $fontMain
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 23px
+        color: #909090
+
+
+
+
+
+
+
+
+
+  .settings_mainBlock_bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: calc(100% - 40px)
+    margin: 0 20px
+    height: 430px
+    border: 1px solid rgba(100, 100, 100, 0.3)
+    border-radius: 5px
+    background-color: $simpleWhite
+
+
+
+
+
+
+
+    .settings_verticalLine
+      display: flex
+      height: 320px
+      border: 1px solid #ececec
+
+    .settings_left_bottom_block
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      min-width: calc(50% - 80px)
+      max-width: calc(50% - 80px)
+      height: calc(100% - 20px)
+      padding: 20px 40px 0 40px
+      .settings_change_pass_block
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 350px
+        width: 100%
+        .settings_ch_pass_header
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          height: 30px
+          width: 100%
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 24px
+          line-height: 39px
+          color: #000000
+        .settings_ch_pass_input_items
+          display: flex
+          align-items: center
+          justify-content: center
+          height: 80px
+          width: 100%
+      .settings_ch_pass_button
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 20px 0 10px 0
+
+
+
+
+
+    .settings_right_bottom_block
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      min-width: calc(50% - 80px)
+      max-width: calc(50% - 80px)
+      height: calc(100% - 20px)
+      padding: 20px 40px 0 40px
+      .settings_change_email_block
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 350px
+        width: 100%
+        .settings_ch_email_header
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          height: 30px
+          width: 100%
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 24px
+          line-height: 39px
+          color: #000000
+          //border: 2px solid black
+        .settings_ch_email_input_items
+          display: flex
+          align-items: center
+          justify-content: center
+          height: 80px
+          width: 100%
+      .settings_ch_email_button
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 20px 0 10px 0
+  .settings_delete_account_button
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 20px 0
+
+
+@media screen and ( max-width: 1500px )
+  .settings_main_block
+    width: 1100px
+@media screen and ( max-width: 1400px )
+  .settings_main_block
+    width: 1000px
+@media screen and ( max-width: 1300px )
+  .settings_main_block
+    width: 900px
+    .settings_mainBlock_top
+      .settings_top_left_block
+        .settings_reports_block
+          .settings_reports_block_items_contsiner
+            .settings_reports_header
+              font-size: 23px
+            .settings_reports_text
+              font-size: 13px
+          .settings_reports_settings_block_container
+            .settings_horizontalLine
+            .settings_reports_settings_block
+              .settings_custom_button
+                .settingsCustomButton
+                  .customButtonON
+                    .customButtonONText
+                  .customButtonOFF
+                  .customButtonLine
+                  &:hover
+              .settings_reports_settings_block_text_items
+                .settings_rep_set_header
+                  font-size: 13px
+                .settings_rep_set_text
+                  font-size: 13px
+        .settings_notifications_block
+          .settings_notify_header
+          .settings_notify_text
+          .settings_notify_select
+      .settings_top_right_block
+        .settings_top_right_header
+          font-size: 23px
+        .settings_top_right_whitelistBlock
+          .settings_top_right_whitelistContainer    
+            .settings_t_r_whiteList_items
+              font-size: 13px
+            .settings_top_right_whitelistIcon
+        .settings_top_right_add_block
+          .settings_t_r_add_block_input
+          .settings_t_r_add_block_button
+        .settings_top_right_description
+          font-size: 12px
+    .settings_mainBlock_bottom
+      .settings_verticalLine
+      .settings_left_bottom_block
+        .settings_change_pass_block
+          .settings_ch_pass_header
+          .settings_ch_pass_input_items
+        .settings_ch_pass_button
+      .settings_right_bottom_block
+        .settings_change_email_block
+          .settings_ch_email_header
+          .settings_ch_email_input_items
+        .settings_ch_email_button
+    .settings_delete_account_button
+@media screen and ( max-width: 1150px )
+  .settings_main_block
+    width: calc(100% - 50px)
+    .settings_mainBlock_top
+      flex-direction: column
+      height: 1160px
+      padding-bottom: 20px
+      .settings_top_left_block
+        min-width: 720px
+        .settings_reports_block
+          .settings_reports_block_items_contsiner
+            .settings_reports_header
+              font-size: 23px
+            .settings_reports_text
+              font-size: 13px
+          .settings_reports_settings_block_container
+            .settings_horizontalLine
+            .settings_reports_settings_block
+              .settings_custom_button
+                .settingsCustomButton
+                  .customButtonON
+                    .customButtonONText
+                  .customButtonOFF
+                  .customButtonLine
+                  &:hover
+              .settings_reports_settings_block_text_items
+                .settings_rep_set_header
+                  font-size: 13px
+                .settings_rep_set_text
+                  font-size: 13px
+        .settings_notifications_block
+          .settings_notify_header
+          .settings_notify_text
+          .settings_notify_select
+      .settings_top_right_block
+        min-width: 680px
+        margin-right: 0
+        .settings_top_right_header
+          font-size: 23px
+        .settings_top_right_whitelistBlock
+          .settings_top_right_whitelistContainer    
+            .settings_t_r_whiteList_items
+              font-size: 13px
+            .settings_top_right_whitelistIcon
+        .settings_top_right_add_block
+          .settings_t_r_add_block_input
+          .settings_t_r_add_block_button
+        .settings_top_right_description
+          font-size: 12px
+    .settings_mainBlock_bottom
+      flex-direction: column-reverse
+      height: 880px
+      width: 720px
+      padding: 10px 0
+      .settings_verticalLine
+      .settings_left_bottom_block
+        min-width: 680px
+        .settings_change_pass_block
+          .settings_ch_pass_header
+          .settings_ch_pass_input_items
+        .settings_ch_pass_button
+      .settings_right_bottom_block
+        min-width: 680px
+        .settings_change_email_block
+          .settings_ch_email_header
+          .settings_ch_email_input_items
+        .settings_ch_email_button
+    .settings_delete_account_button
+@media screen and ( max-width: 800px )
+  .settings_main_block
+    width: calc(100% - 50px)
+    .settings_mainBlock_top
+      flex-direction: column
+      height: 1160px
+      padding-bottom: 20px
+      .settings_top_left_block
+        min-width: 90%
+        .settings_reports_block
+          .settings_reports_block_items_contsiner
+            .settings_reports_header
+              font-size: 23px
+            .settings_reports_text
+              font-size: 13px
+          .settings_reports_settings_block_container
+            .settings_horizontalLine
+            .settings_reports_settings_block
+              .settings_custom_button
+                width: 90px
+                .settingsCustomButton
+                  width: 80px
+                  height: 45px
+                  font-size: 12px
+                  border-radius: 10px
+                  .customButtonON
+                    height: 150%
+                    width: 55%
+                    .customButtonONText
+                  .customButtonOFF
+                    height: 100%
+                    width: 45%
+              .settings_reports_settings_block_text_items
+                .settings_rep_set_header
+                  font-size: 13px
+                .settings_rep_set_text
+                  font-size: 13px
+        .settings_notifications_block
+          .settings_notify_header
+          .settings_notify_text
+          .settings_notify_select
+      .settings_top_right_block
+        min-width: calc(100% - 110px)
+        margin-right: 0
+        .settings_top_right_header
+          font-size: 23px
+        .settings_top_right_whitelistBlock
+          .settings_top_right_whitelistContainer    
+            .settings_t_r_whiteList_items
+              font-size: 13px
+            .settings_top_right_whitelistIcon
+        .settings_top_right_add_block
+          .settings_t_r_add_block_input
+          .settings_t_r_add_block_button
+        .settings_top_right_description
+          font-size: 12px
+    .settings_mainBlock_bottom
+      flex-direction: column-reverse
+      width: calc(100% - 70px)
+      height: 800px
+      padding: 10px 0
+      .settings_verticalLine
+        display: none
+      .settings_left_bottom_block
+        height: 380px
+        min-width: 90%
+        .settings_change_pass_block
+          .settings_ch_pass_header
+          .settings_ch_pass_input_items
+            height: 70px
+        .settings_ch_pass_button
+      .settings_right_bottom_block
+        height: 380px
+        min-width: 90%
+        .settings_change_email_block
+          .settings_ch_email_header
+          .settings_ch_email_input_items
+            height: 60px
+        .settings_ch_email_button
+    .settings_delete_account_button
+@media screen and ( max-width: 600px )
+  .settings_main_block
+    width: calc(100% - 50px)
+    .settings_mainBlock_top
+      flex-direction: column
+      height: 1160px
+      padding-bottom: 20px
+      .settings_top_left_block
+        min-width: 100%
+        .settings_reports_block
+          .settings_reports_block_items_contsiner
+            .settings_reports_header
+              font-size: 21px
+            .settings_reports_text
+              font-size: 12px
+          .settings_reports_settings_block_container
+            .settings_horizontalLine
+            .settings_reports_settings_block
+              .settings_custom_button
+                width: 90px
+                .settingsCustomButton
+                  width: 75px
+                  height: 42px
+                  font-size: 11px
+                  border-radius: 10px
+              .settings_reports_settings_block_text_items
+                .settings_rep_set_header
+                  font-size: 12px
+                .settings_rep_set_text
+                  font-size: 12px
+        .settings_notifications_block
+          .settings_notify_header
+          .settings_notify_text
+          .settings_notify_select
+      .settings_top_right_block
+        min-width: calc(100% - 50px)
+        margin-right: 0
+        .settings_top_right_header
+          font-size: 21px
+        .settings_top_right_whitelistBlock
+          .settings_top_right_whitelistContainer    
+            .settings_t_r_whiteList_items
+              font-size: 12px
+            .settings_top_right_whitelistIcon
+        .settings_top_right_add_block
+          .settings_t_r_add_block_input
+          .settings_t_r_add_block_button
+        .settings_top_right_description
+          font-size: 11px
+    .settings_mainBlock_bottom
+      flex-direction: column-reverse
+      width: 100%
+      height: 800px
+      padding: 10px 0
+      .settings_verticalLine
+        display: none
+      .settings_left_bottom_block
+        height: 380px
+        min-width: 90%
+        .settings_change_pass_block
+          .settings_ch_pass_header
+          .settings_ch_pass_input_items
+            height: 70px
+        .settings_ch_pass_button
+      .settings_right_bottom_block
+        height: 380px
+        min-width: 90%
+        .settings_change_email_block
+          .settings_ch_email_header
+          .settings_ch_email_input_items
+            height: 60px
+        .settings_ch_email_button
+    .settings_delete_account_button
+@media screen and ( max-width: 400px )
+  .settings_main_block
+    width: calc(100% - 20px)
+    .settings_mainBlock_top
+      flex-direction: column
+      height: 1160px
+      padding-bottom: 20px
+      .settings_top_left_block
+        min-width: 100%
+        .settings_reports_block
+          .settings_reports_block_items_contsiner
+            .settings_reports_header
+              font-size: 20px
+            .settings_reports_text
+              font-size: 11px
+          .settings_reports_settings_block_container
+            .settings_horizontalLine
+            .settings_reports_settings_block
+              .settings_custom_button
+                width: 90px
+                .settingsCustomButton
+                  width: 75px
+                  height: 42px
+                  font-size: 11px
+                  border-radius: 10px
+              .settings_reports_settings_block_text_items
+                .settings_rep_set_header
+                  font-size: 11px
+                .settings_rep_set_text
+                  font-size: 11px
+        .settings_notifications_block
+          .settings_notify_header
+          .settings_notify_text
+          .settings_notify_select
+      .settings_top_right_block
+        min-width: calc(100% - 40px)
+        margin-right: 0
+        .settings_top_right_header
+          font-size: 20px
+        .settings_top_right_whitelistBlock
+          .settings_top_right_whitelistContainer    
+            .settings_t_r_whiteList_items
+              font-size: 11px
+            .settings_top_right_whitelistIcon
+        .settings_top_right_add_block
+          .settings_t_r_add_block_input
+          .settings_t_r_add_block_button
+        .settings_top_right_description
+          font-size: 10px
+    .settings_mainBlock_bottom
+      flex-direction: column-reverse
+      height: 800px
+      padding: 10px 0
+      .settings_left_bottom_block
+        height: 380px
+        min-width: 90%
+        .settings_change_pass_block
+          .settings_ch_pass_header
+          .settings_ch_pass_input_items
+            height: 70px
+        .settings_ch_pass_button
+      .settings_right_bottom_block
+        height: 380px
+        min-width: 90%
+        .settings_change_email_block
+          .settings_ch_email_header
+            height: 20px
+          .settings_ch_email_input_items
+            height: 60px
+        .settings_ch_email_button
+    .settings_delete_account_button

@@ -1,0 +1,109 @@
+@import "../../../App"
+
+.dashboard_overview_mainBlock
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: 100%
+  padding: 0
+
+
+.filters_and_main_block_filters
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly
+  width: 340px
+  height: 210px
+  margin-right: 20px
+  padding: 5px 20px
+  background-color: white
+  box-shadow: 0 4px 5px rgba(80, 100, 140, 0.2)
+  border-radius: 5px
+  position: absolute
+  z-index: 5
+  left: 235px
+  top: 80px
+  .block_filters_header
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    height: 20px
+    min-height: 20px
+    font-family: $fontMain
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 29px
+    color: #959595
+    .filters_header_icon
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      width: 20px
+      margin-right: 5px
+      svg
+        width: 100%
+        height: 17px
+  .block_filters_items
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    height: 15px
+    min-height: 10px
+    font-family: $fontMain
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 29px
+    padding: 5px 10px
+    color: #000000
+    &:hover
+      cursor: pointer
+      background-color: $mainColor
+      color: white
+      border-radius: 5px
+
+
+
+@media screen and ( max-width: 1500px)
+  .dashboard_overview_mainBlock
+    width: calc(100% - 400)
+    padding: 0 200px
+@media screen and ( max-width: 1200px )
+  .filters_and_main_block_filters
+    width: 250px
+    height: 190px
+  
+@media screen and ( max-width: 1000px)
+  .dashboard_overview_mainBlock
+    width: calc(100% - 100)
+    padding: 0 50px
+  .filters_and_main_block_filters
+    left: 35px
+    top: 125px
+    width: 290px
+@media screen and ( max-width: 900px )
+  .filters_and_main_block_filters
+    width: 230px
+    height: 190px
+@media screen and ( max-width: 800px )
+  .filters_and_main_block_filters
+    width: 180px
+    height: 160px
+    padding: 5px 15px
+    .block_filters_header
+      font-size: 13px
+      margin-bottom: 5px
+      .filters_header_icon
+        svg
+          height: 16px
+          width: 18px
+    .block_filters_items
+      padding: 8px 13px
+      font-size: 11px

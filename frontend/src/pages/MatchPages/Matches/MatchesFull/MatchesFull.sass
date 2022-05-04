@@ -1,0 +1,1587 @@
+@import '../../../../App'
+
+.matchesPageContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    max-width: 100%
+    overflow: hidden
+
+    .matches_back_button_block
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        min-width: calc(100% - 40px)
+        max-width: calc(100% - 40px)
+        margin: 10px 20px 0 20px
+        height: 20px
+        // border: 1px solid black
+        a
+            display: flex
+            flex-direction: row
+            text-decoration: none
+            .matches_back_arrow
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+            .matches_back_text
+                display: flex
+                align-items: center
+                justify-content: center
+                padding-left: 3px
+                font-family: $fontMain
+                font-style: normal
+                font-weight: bolder
+                font-size: 13px
+                text-transform: uppercase
+                cursor: pointer
+                color: #919191
+
+
+    .matches_mainLogo_container
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        width: calc(100% - 40px)
+        height: 115px
+        min-height: 115px
+        margin: 10px 20px
+        .matches_mailLogo
+            width: 200px
+            height: 70px
+            background-image: url("../../../../assets/images/violetLogo.svg")
+            background-position: center
+            background-repeat: no-repeat
+            margin: 0 auto
+        .matches_textLogo
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 300px
+            height: 40px
+            font-family: $fontMain
+            font-style: normal
+            font-weight: normal
+            font-size: 30px
+            line-height: 40px
+            text-align: center
+            color: $simpleBlack  // changed !
+
+
+
+
+    .matchesPageMainBlock
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        width: 100%
+        
+
+        //  -----  FILTERS BLOCK  -----  //
+
+
+
+        .matches_all_filters_block
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            height: 30px
+            width: 1500px
+            max-width: 1500px
+            margin: 20px 20px 0 20px
+            // border-bottom: 1px solid #EDEDED
+
+            .mobile_filters_button
+                display: none
+
+            .active
+                display: none
+
+            .matches_sort_filters_container
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+                justify-content: space-between
+                width: 77%
+                height: 20px
+
+                .active
+                    display: flex
+                .nonActive
+                    display: none
+
+                .group_container
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: flex-start
+                    width: auto
+                    max-width: 230px
+                    height: 100%
+                    cursor: pointer
+                    // border: 1px solid red
+
+                    .pc_group
+                        display: flex
+                    .mobile_group
+                        display: none
+
+                    .group_filters
+                        align-items: center
+                        justify-content: center
+                        width: 100%
+                        height: 100%
+
+
+                        .filter_main_text
+                            display: flex
+                            align-items: center
+                            justify-content: flex-start
+                            // padding-left: 5px
+                            height: 100%
+                            min-width: 80px
+                            width: 80px
+                            font-family: $fontMain
+                            font-style: normal
+                            font-weight: normal
+                            font-size: 14px
+                            line-height: 23px
+                            text-transform: uppercase
+                            color: #2f2f2f
+                        .filter_selected_text
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            height: 100%
+                            min-width: 30px
+                            width: auto
+                            padding-left: 5px
+                            font-family: $fontMain
+                            font-style: normal
+                            font-weight: normal
+                            font-size: 14px
+                            line-height: 23px
+                            text-transform: uppercase
+                            color: #555555
+                        .filter_selected_arrow
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            height: 100%
+                            min-width: 20px
+                            max-width: 20px
+
+
+
+                    .matches_group_items
+                        display: flex
+                        //display: none
+                        flex-direction: column
+                        align-items: center
+                        justify-content: flex-start
+                        width: auto
+                        height: auto
+                        border: 1px solid #e3e3e3
+                        margin: 20px auto 0 70px
+                        position: absolute
+                        z-index: 5
+                        .matches_group_item
+                            display: flex
+                            align-items: center
+                            justify-content: flex-start
+                            height: 30px
+                            width: 100%
+                            background: #ffffff
+                            .group_item_text
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                padding: 0 20px 0 20px
+                                font-family: $fontMain
+                                font-style: normal
+                                font-weight: normal
+                                font-size: 14px
+                                line-height: 29px
+                                text-transform: uppercase
+                                color: #909090
+                            &:hover
+                                background: $mainColor
+                                .group_item_text
+                                    color: #ffffff
+
+
+
+
+
+
+
+                .matches_filters_text_container
+                    flex-direction: row
+                    align-items: center
+                    justify-content: space-between
+                    min-width: 230px
+                    .matches_filters_text_original, .matches_filters_text_plagiat
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        min-width: 80px
+                        height: 20px
+                        font-family: $fontMain
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 29px
+                        text-align: center
+                        text-transform: uppercase
+                    .matches_filters_text_original
+                        color: #48519D
+                    .matches_filters_text_plagiat
+                        color: #909090
+
+            .view_and_pages_set_container
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+                justify-content: center
+                width: 23%
+                height: 30px
+                .matches_view_set
+                    display: flex
+                    align-items: center
+                    justify-content: space-evenly
+                    width: 130px
+                    height: 30px
+
+
+                    .view_set_text
+                        font-family: $fontMain
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 23px
+                        text-transform: uppercase
+                        color: #000000
+                    .view_set_groupRow, .view_set_groupWrap
+                        cursor: pointer
+                        img
+                            margin-top: 3px
+                            width: 28px
+                            height: 28px
+
+
+
+
+
+                .matches_pages_set
+                    display: flex
+                    align-items: center
+                    justify-content: space-evenly
+                    width: 210px
+                    height: 30px
+                    // border: 1px solid black
+                    .pages_set_text
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        width: 25%
+                        margin-right: 10px
+                        font-family: $fontMain
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 23px
+                        height: 30px
+                        text-transform: uppercase
+                        color: #000000
+                    .pages_set_blocks
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        width: 70%
+                        height: 30px
+                        // border: 1px solid black
+                        .page_block
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            width: 25px
+                            height: 25px
+                            background: #dedff6
+                            cursor: pointer
+                            font-family: $fontMain
+                            font-style: normal
+                            font-weight: bold
+                            font-size: 14px
+                            line-height: 23px
+                            text-transform: uppercase
+                            color: #000000
+                        .pages_next_block
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            width: 25px
+                            height: 25px
+                            background: $mainColor
+                            font-family: $fontMain
+                            font-style: normal
+                            font-weight: bold
+                            font-size: 14px
+                            text-transform: uppercase
+                            color: #fff
+                            cursor: pointer
+
+
+        .matches_main_pictures_block
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            justify-content: space-between
+            width: 100%
+            max-width: 1500px
+            margin-top: 5px
+            .nonActive
+                display: none
+            .matches_left_filters_block
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                justify-content: flex-start
+                width: 200px
+                height: 100%
+            .matches_image_items_vertical_view_container
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                width: 1240px
+                max-width: 1240px
+                height: auto
+                background-color: $mainBackground
+                .matches_image_item
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    justify-content: space-between
+                    width: calc(100% - 10px)
+                    padding: 0 5px
+                    height: 145px
+                    border: 1px solid rgba(212, 212, 212, 0.4)
+                    border-radius: 5px
+                    margin-bottom: 20px
+                    background-color: $simpleWhite
+
+                    .image_item_photo_container
+                        display: flex
+                        flex-direction: row
+                        align-items: center
+                        justify-content: space-between
+                        height: 130px
+                        width: 280px
+                        .image_item_photo
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            min-width: calc(50% - 10px)
+                            height: 100%
+                            img
+                                min-width: 50px
+                                width: auto
+                                max-width: 100%
+                                min-height: 50px
+                                height: auto
+                                max-height: 100%
+
+
+
+                    .image_item_description_block
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        justify-content: space-between
+                        height: 130px
+                        width: 350px
+                        min-width: 320px
+
+
+                        .item_description_main
+                            display: flex
+                            flex-direction: column
+                            flex-wrap: wrap
+                            align-items: flex-start
+                            justify-content: flex-start
+                            width: 100%
+                            height: 90px
+                            .description_main
+                                display: flex
+                                flex-direction: column
+                                align-items: flex-start
+                                justify-content: space-evenly
+                                width: calc(100% / 2)
+                                height: 40px
+                                .main_matches_block
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    width: 80px
+                                    height: 20px
+                                    background-color: #E9F0F3
+                                    border-radius: 5px
+                                    padding: 2px 0
+                                    margin: 0 0 10px 10px
+                                    font-family: $fontMain
+                                    font-style: normal
+                                    font-weight: bold
+                                    font-size: 11px
+                                    text-align: center
+                                    color: #007890
+                                .description_main_header
+                                    font-family: $fontMain
+                                    font-style: normal
+                                    font-weight: bold
+                                    font-size: 12px
+                                    text-transform: uppercase
+                                    color: #919191
+                                    margin-left: 10px
+                                .description_main_text
+                                    font-family: $fontMain
+                                    font-style: normal
+                                    font-weight: normal
+                                    font-size: 12px
+                                    color: #000000
+                                    margin-left: 10px
+
+
+                        .item_description_bottom
+                            display: flex
+                            flex-direction: column
+                            align-items: flex-end
+                            justify-content: space-evenly
+                            width: 100%
+                            height: 45px
+                            .description_bottom_header
+                                width: calc(100% - 10px)
+                                padding-left: 10px
+                                font-family: $fontMain
+                                font-style: normal
+                                font-weight: bold
+                                font-size: 11px
+                                text-transform: uppercase
+                                color: #919191
+                                margin-left: 10px
+                            .description_bottom_url, a
+                                font-family: $fontMain
+                                font-style: normal
+                                font-weight: normal
+                                font-size: 10px
+                                color: #A4A4A4
+                                text-transform: none
+                                min-height: 15px
+                                width: calc(100% - 10px)
+                                overflow-x: scroll
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    .item_button_star_seen_container
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        height: 130px
+                        width: 140px
+                        margin: 0 10px
+
+                        .image_item_button
+                            display: flex
+                            align-items: flex-start
+                            justify-content: flex-end
+                            min-height: 100%
+                            min-width: 65px
+                            .item_button_block
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                min-width: 100%
+                                min-height: 20px
+                                text-transform: uppercase
+                                background-color: #48519D
+                                border-radius: 3px
+                                font-family: $fontMain
+                                font-style: normal
+                                font-weight: normal
+                                font-size: 11px
+                                color: #FFFFFF
+
+                        .item_star_seen_container
+                            display: flex
+                            flex-direction: row
+                            align-items: center
+                            justify-content: flex-start
+                            width: 60px
+                            height: 100%
+
+                            .image_item_star, .image_item_seen
+                                display: flex
+                                flex-direction: column
+                                align-items: center
+                                justify-content: flex-start
+                                height: 100%
+                                width: 20px
+                                margin: 0 5px
+                                .item_star_block, .item_seen_block
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    width: 20px
+                                    height: 20px
+                                    background-color: #F6F7FF
+                                    border-radius: 5px
+                                    img
+                                        width: 20px
+                                        height: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    .matches_item_options_container
+                        display: flex
+                        flex-direction: row
+                        flex-wrap: wrap
+                        justify-content: space-between
+                        height: 134px
+                        width: 224px
+                        min-width: 224px
+                        background-color: rgba(241, 241, 241, 0.2)
+                        .item_options_container
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            width: calc(100% / 2)
+                            height: 65px
+                            .item_options
+                                display: flex
+                                flex-direction: column
+                                align-items: center
+                                justify-content: space-evenly
+                                width: 90px
+                                height: 60px
+                                .option_icon
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                .option_text
+                                    font-family: $fontMain
+                                    font-style: normal
+                                    font-weight: inherit
+                                    font-size: 9px
+                                    text-transform: uppercase
+                                    color: #919191
+                                &:hover
+                                    background-color: rgba(222, 222, 222, 0.47)
+                                    border-radius: 5px
+                                    cursor: pointer
+
+
+            .matches_image_items_horizontal_view_container
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                align-items: flex-start
+                justify-content: flex-start
+                min-width: 85%
+                max-width: 85%
+                min-height: 300px
+                height: auto
+                background-color: $mainBackground
+                .matches_image_view_block
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: space-between
+                    padding: 5px 20px
+                    min-width: 130px
+                    max-width: 130px
+                    min-height: 130px
+                    max-height: 130px
+                    .matches_image
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        min-width: 130px
+                        max-width: 130px
+                        min-height: 130px
+                        max-height: 130px
+                        img
+                            position: absolute
+                            min-width: 50px
+                            width: auto
+                            max-width: 130px
+                            min-height: 50px
+                            height: auto
+                            max-height: 130px
+                        .matches_image_matches
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            position: relative
+                            margin-bottom: 100px
+                            margin-right: 95px
+                            width: 25px
+                            height: 20px
+                            background: #48519D
+                            border-radius: 5px
+                            font-family: $fontMain
+                            font-style: normal
+                            font-weight: bold
+                            font-size: 13px
+                            text-align: center
+                            color: #FFFFFF
+
+@media screen and (max-width: 1750px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+            .matches_all_filters_block
+                width: 1300px
+                .matches_sort_filters_container
+                    .group_container
+                        .group_filters
+                            .filter_main_text
+                            .filter_selected_text
+                            .filter_selected_arrow
+                    .matches_filters_text_container
+                        min-width: 190px
+                        margin: 0 20px
+            .matches_main_pictures_block
+                width: 1300px
+                .matches_left_filters_block
+                    width: 170px
+                .matches_image_items_vertical_view_container
+                    width: 1100px
+@media screen and (max-width: 1550px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+
+
+            .matches_all_filters_block
+                width: 1150px
+                .matches_sort_filters_container
+                    .group_container
+                        .group_filters
+                            .filter_main_text
+                            .filter_selected_text
+                            .filter_selected_arrow
+                    .matches_filters_text_container
+                        min-width: 150px
+                        margin: 0 20px 0 0
+                .view_and_pages_set_container
+                    .matches_pages_set
+                        .pages_set_text
+                            font-size: 12px
+                        .pages_set_blocks
+                            .page_block
+                                font-size: 12px
+
+
+            .matches_main_pictures_block
+                width: 1150px
+                .matches_left_filters_block
+                    width: 120px
+                    height: 150px
+                .matches_image_items_vertical_view_container
+                    width: 1000px
+
+@media screen and (max-width: 1400px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+
+
+            .matches_all_filters_block
+                width: 1100px
+                .active
+                .nonActive
+                .matches_sort_filters_container
+                    width: 70%
+                    justify-content: space-between
+                    .active
+                        display: none
+                    .group_container
+                        .pc_group
+                        .mobile_group
+                        .group_filters
+                            .filter_main_text
+                            .filter_selected_text
+                            .filter_selected_arrow
+                        .matches_group_items
+                            .matches_group_item
+                                .group_item_text
+                    .matches_filters_text_container
+                        min-width: 200px
+                        margin: 0 20px 0 0
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                        .matches_filters_text_original
+                        .matches_filters_text_plagiat
+                .view_and_pages_set_container
+                    width: 27%
+                    .matches_view_set
+                        .view_set_text
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                    .matches_pages_set
+                        .pages_set_text
+                            font-size: 12px
+                        .pages_set_blocks
+                            .page_block
+                            .pages_next_block
+                                font-size: 12px
+
+
+
+            .matches_main_pictures_block
+                width: 1100px
+                flex-direction: column
+                align-items: center
+                .matches_left_filters_block
+                    flex-direction: row
+                    align-items: flex-end
+                    justify-content: space-between
+                    min-height: 70px
+                    max-height: 70px
+                    width: 100%
+                    margin: 3px 0 5px 0
+                    .nonActive
+                        display: flex
+                    .matches_filters_text_container
+                        flex-direction: row
+                        align-items: center
+                        justify-content: space-between
+                        min-width: 230px
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            min-width: 80px
+                            height: 20px
+                            font-family: $fontMain
+                            font-style: normal
+                            font-weight: normal
+                            font-size: 14px
+                            line-height: 29px
+                            text-align: center
+                            text-transform: uppercase
+                        .matches_filters_text_original
+                            color: #48519D
+                        .matches_filters_text_plagiat
+                            color: #909090
+                .matches_image_items_vertical_view_container
+                    width: 100%
+                    margin: 0 20px
+                    .matches_image_item
+                        .image_item_photo_container
+                            min-width: 200px
+                            width: 230px
+                        .image_item_description_block
+                            min-width: 250px
+                            width: 300px
+                        .matches_item_options_container
+                            height: 134px
+                            width: 224px
+                            min-width: 224px
+                            .item_options_container
+                                .item_options
+                                    .option_text
+                                        font-size: 7px
+@media screen and (max-width: 1350px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+            .matches_all_filters_block
+                width: calc(100% - 40px)
+                .active
+                .nonActive
+                .matches_sort_filters_container
+                    width: 73%
+                    justify-content: space-between
+                    .active
+                        display: none
+                    .group_container
+                        .pc_group
+                        .mobile_group
+                        .group_filters
+                            .filter_main_text
+                            .filter_selected_text
+                            .filter_selected_arrow
+                        .matches_group_items
+                            .matches_group_item
+                                .group_item_text
+                    .matches_filters_text_container
+                        min-width: 200px
+                        margin: 0 20px 0 0
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                        .matches_filters_text_original
+                        .matches_filters_text_plagiat
+                .view_and_pages_set_container
+                    width: 26%
+                    .matches_view_set
+                        .view_set_text
+                            font-size: 12px
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                                width: 24px
+                                height: 24px
+                    .matches_pages_set
+                        .pages_set_text
+                            font-size: 12px
+                        .pages_set_blocks
+                            .page_block
+                                width: 21px
+                                height: 21px
+                                font-size: 12px
+                            .pages_next_block
+                                width: 21px
+                                height: 21px
+                                font-size: 12px
+            .matches_main_pictures_block
+                width: calc(100% - 40px)
+                .matches_image_items_vertical_view_container
+                    .matches_image_item
+                        .matches_item_options_container
+                            height: 134px
+                            min-width: 150px
+                            width: 154px
+                            .item_options_container
+                                .item_options
+                                    .option_text
+                                        font-size: 6px
+@media screen and (max-width: 1200px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+            .matches_all_filters_block
+                flex-direction: column
+                justify-content: center
+                align-items: flex-end
+                height: 50px
+                .active
+                .nonActive
+                .matches_sort_filters_container
+                    width: 100%
+                    .active
+                    .group_container
+                        .pc_group
+                        .mobile_group
+                        .group_filters
+                            .filter_main_text
+                                font-size: 13px
+                            .filter_selected_text
+                                font-size: 13px
+                            .filter_selected_arrow
+                                font-size: 13px
+                        .matches_group_items
+                            .matches_group_item
+                                .group_item_text
+                    .matches_filters_text_container
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                        .matches_filters_text_original
+                        .matches_filters_text_plagiat
+                .view_and_pages_set_container
+                    min-width: 250px
+                    width: 250px
+                    .matches_view_set
+                        .view_set_text
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                    .matches_pages_set
+                        .pages_set_text
+                        .pages_set_blocks
+                            .page_block
+                            .pages_next_block
+            .matches_main_pictures_block
+                .matches_image_items_vertical_view_container
+                    .matches_image_item
+                        .matches_item_options_container
+                            .item_options_container
+                                .item_options
+                                    .option_text
+
+
+
+@media screen and (max-width: 900px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+            .matches_main_pictures_block
+                .matches_left_filters_block
+                    justify-content: space-between
+                    min-height: 50px
+                    max-height: 50px
+                    width: 100%
+                    padding-left: 20px
+                    margin-bottom: 10px
+                    .matches_filters_text_container
+                        min-width: 25%
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                            min-width: 80px
+                            height: 20px
+                            font-size: 14px
+
+@media screen and (max-width: 800px)
+    .matchesPageContainer
+        .matches_back_button_block
+            a
+                .matches_back_arrow
+                    img
+                        width: 30px
+                        height: 15px
+                .matches_back_text
+                    padding-left: 3px
+                    font-size: 11px
+        .matchesPageMainBlock
+            .matches_main_pictures_block
+                flex-direction: column
+                align-items: flex-start
+                .matches_left_filters_block
+                    min-height: 50px
+                    max-height: 50px
+                .matches_image_items_vertical_view_container
+                    margin: 0
+                    .matches_image_item
+                        .image_item_photo_container
+                            min-width: 240px
+                            height: 130px
+                        .image_item_description_block
+                            min-width: 200px
+                            width: 250px
+                            .item_description_main
+                                .description_main
+                                    .main_matches_block
+                                        font-size: 8px
+                                    .description_main_header
+                                        font-size: 9px
+                                    .description_main_text
+                                        font-size: 9px
+                                .item_description_bottom
+                                    .description_bottom_header
+                                        font-size: 8px
+                                    .description_bottom_url, a
+                                        font-size: 7px
+                        .item_button_star_seen_container
+                            flex-direction: column
+                            width: 70px
+                            .image_item_button
+                                min-height: 20px
+                                .item_button_block
+                                    max-width: 100px
+                            .item_star_seen_container
+                                height: calc(100% - 30px)
+                                py: 10px
+                        .matches_item_options_container
+                            height: 134px
+                            min-width: 124px
+                            width: 154px
+                            .item_options_container
+                                .item_options
+                                    .option_text
+                                        font-size: 6px
+
+@media screen and (max-width: 700px)
+    .matchesPageContainer
+        .matches_mainLogo_container
+            height: 80px
+            min-height: 80px
+            margin: 10px 20px 0 20px
+            .matches_mailLogo
+                width: 150px
+                height: 55px
+            .matches_textLogo
+                font-size: 24px
+                height: 25px
+        .matchesPageMainBlock
+
+            .matches_all_filters_block
+
+                flex-direction: row
+                justify-content: space-between
+                align-items: flex-end
+                height: 28px
+                .disable
+                    display: none
+                .mobile_filters_button
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 80px
+                    height: 20px
+                    background-color: white
+                    cursor: pointer
+                    border-radius: 5px
+                    font-family: $fontMain
+                    font-weight: bold
+                    letter-spacing: 0.4px
+                    font-size: 11px
+                    color: #000000
+                .matches_sort_filters_container
+                    position: absolute
+                    flex-direction: column
+                    height: 70px
+                    width: 220px
+                    background: $mainBackground
+                    border: 1px solid $mainColor
+                    border-radius: 5px
+                    padding: 5px 5px 5px 12px
+                    .group_container
+                        .pc_group
+                        .mobile_group
+                        .group_filters
+                            .filter_main_text
+                                font-size: 13px
+                            .filter_selected_text
+                                font-size: 13px
+                            .filter_selected_arrow
+                                font-size: 13px
+                        .matches_group_items
+                            .matches_group_item
+                                .group_item_text
+                    .matches_filters_text_container
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                        .matches_filters_text_original
+                        .matches_filters_text_plagiat
+                .view_and_pages_set_container
+                    min-width: 250px
+                    width: 250px
+                    max-width: 250px
+                    .matches_view_set
+                        .view_set_text
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                    .matches_pages_set
+                        .pages_set_text
+                        .pages_set_blocks
+                            .page_block
+                            .pages_next_block
+
+
+
+                .view_and_pages_set_container
+                    width: 100%
+                    margin-left: 30px
+                    height: 25px
+                    .matches_view_set
+                        height: 25px
+                        justify-content: space-evenly
+                        .view_set_text
+                            font-size: 10px
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                                max-width: 22px
+                                max-height: 22px
+                    .matches_pages_set
+                        height: 25px
+                        width: 180px
+                        .pages_set_text
+                            font-size: 11px
+                        .pages_set_blocks
+                            .page_block
+                                width: 18px
+                                height: 16px
+                                font-size: 11px
+                            .pages_next_block
+                                width: 18px
+                                height: 16px
+
+
+
+
+
+
+
+
+
+
+            .matches_main_pictures_block
+                width: calc(100% - 40px)
+                .matches_left_filters_block
+                    min-height: 20px
+                    max-height: 20px
+                    padding: 0
+                    justify-content: space-between
+                    margin-bottom: 10px
+                .matches_image_items_vertical_view_container
+                    .matches_image_item
+                        .item_button_star_seen_container
+                            width: 60px
+                            .image_item_button
+                                .item_button_block
+                                    min-height: 17px
+                                    font-size: 9px
+                        .matches_item_options_container
+                            flex-direction: column
+                            align-items: center
+                            flex-wrap: nowrap
+                            height: 134px
+                            min-width: 40px
+                            width: 40px
+                            .item_options_container
+                                width: 100%
+                                height: 30px
+                                .item_options
+                                    width: 100%
+                                    height: 100%
+                                    .option_icon
+                                        img
+                                            width: 15px
+                                            height: 15px
+                                    .option_text
+                                        font-size: 4px
+
+
+@media screen and (max-width: 600px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+
+
+            .matches_all_filters_block
+                flex-direction: row
+                justify-content: space-between
+                align-items: flex-end
+                .mobile_filters_button
+                .active
+                .nonActive
+                    display: flex
+                .matches_sort_filters_container
+                    position: absolute
+                    flex-direction: column
+                    height: 70px
+                    width: 220px
+                    background: $mainBackground
+                    border: 1px solid $mainColor
+                    border-radius: 5px
+                    padding: 5px 5px 5px 12px
+                    // border: 1px solid black
+                    .active
+                    .group_container
+                        .pc_group
+                        .mobile_group
+                        .group_filters
+                            .filter_main_text
+                                font-size: 13px
+                            .filter_selected_text
+                                font-size: 13px
+                            .filter_selected_arrow
+                                font-size: 13px
+                        .matches_group_items
+                            .matches_group_item
+                                .group_item_text
+                    .matches_filters_text_container
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                        .matches_filters_text_original
+                        .matches_filters_text_plagiat
+                .view_and_pages_set_container
+                    min-width: 250px
+                    width: 250px
+                    max-width: 250px
+                    .matches_view_set
+                        .view_set_text
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                    .matches_pages_set
+                        .pages_set_text
+                        .pages_set_blocks
+                            .page_block
+                            .pages_next_block
+
+
+
+                .view_and_pages_set_container
+                    width: 100%
+                    margin-left: 30px
+                    height: 25px
+                    .matches_view_set
+                        height: 25px
+                        justify-content: space-evenly
+                        .view_set_text
+                            font-size: 10px
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                                max-width: 22px
+                                max-height: 22px
+                    .matches_pages_set
+                        height: 25px
+                        width: 180px
+                        .pages_set_text
+                            font-size: 11px
+                        .pages_set_blocks
+                            .page_block
+                                width: 18px
+                                height: 18px
+                                font-size: 11px
+                            .pages_next_block
+                                width: 18px
+                                height: 18px
+
+
+
+            .matches_main_pictures_block
+                .matches_left_filters_block
+                    min-height: 25px
+                    align-items: center
+                    .matches_filters_text_container
+                        flex-direction: column
+                        min-width: 100px
+                        height: 23px
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                            font-size: 10px
+                            height: 10px
+                .matches_image_items_vertical_view_container
+                    .matches_image_item
+                        .image_item_photo_container
+                            flex-direction: column
+                            min-width: 80px
+                            width: 140px
+                            .image_item_photo
+                                min-width: calc(100% - 4px)
+                                height: calc(50% - 4px)
+                                padding: 2px
+                        .image_item_description_block
+                            min-width: 200px
+                            width: 250px
+                            .item_description_main
+                                .description_main
+                                    .main_matches_block
+                                        width: 55px
+                                        height: 15px
+                                        font-size: 8px
+                                    .description_main_header
+                                        font-size: 9px
+                                    .description_main_text
+                                        font-size: 9px
+                                .item_description_bottom
+                                    .description_bottom_header
+                                        font-size: 8px
+                                    .description_bottom_url, a
+                                        font-size: 7px
+                        .item_button_star_seen_container
+                            width: 50px
+                            .image_item_button
+                                justify-content: center
+                                min-width: 40px
+                                width: 60px
+                                .item_button_block
+                                    min-height: 17px
+                                    font-size: 8px
+                                    min-width: 60px
+                                    max-width: 60px
+
+@media screen and (max-width: 500px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+            .matches_main_pictures_block
+                .matches_left_filters_block
+                .matches_image_items_vertical_view_container
+                    .matches_image_item
+                        min-width: 400px
+                        .image_item_photo_container
+                            flex-direction: column
+                            min-width: 80px
+                            width: 140px
+                            .image_item_photo
+                                min-width: 100%
+                                height: 50%
+                        .image_item_description_block
+                            min-width: 180px
+                            width: 200px
+                            .item_description_main
+                                .description_main
+                                    .main_matches_block
+                                        width: 55px
+                                        height: 15px
+                                        font-size: 8px
+                                    .description_main_header
+                                        font-size: 9px
+                                    .description_main_text
+                                        font-size: 9px
+                                .item_description_bottom
+                                    .description_bottom_header
+                                        font-size: 8px
+                                    .description_bottom_url, a
+                                        font-size: 7px
+                        .item_button_star_seen_container
+                            margin: 0 5px
+                            .image_item_button
+                                max-width: 30px
+                        .item_button_star_seen_container
+                            width: 50px
+                            .image_item_button
+                                justify-content: center
+                                min-width: 50px
+                                width: 50px
+                                .item_button_block
+                                    min-height: 17px
+                                    font-size: 8px
+                                    min-width: 50px
+                                    max-width: 50px
+                        .matches_item_options_container
+                            height: 134px
+                            min-width: 30px
+                            width: 30px
+                            .item_options_container
+                                width: 100%
+                                height: 30px
+                                .item_options
+                                    width: 100%
+                                    height: 100%
+                                    .option_icon
+                                        img
+                                            width: 15px
+                                            height: 15px
+                                    .option_text
+                                        font-size: 4px
+
+@media screen and (max-width: 450px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+            .matches_all_filters_block
+                min-width: 250px
+                width: calc(100% - 15px)
+                flex-direction: column
+                justify-content: space-between
+                align-items: flex-start
+                height: 50px
+                .mobile_filters_button
+                .active
+                .nonActive
+                    display: flex
+                .matches_sort_filters_container
+                    position: absolute
+                    flex-direction: column
+                    height: 70px
+                    width: 220px
+                    background: $mainBackground
+                    border: 1px solid $mainColor
+                    border-radius: 5px
+                    padding: 5px 5px 5px 12px
+                    // border: 1px solid black
+                    .active
+                    .group_container
+                        .pc_group
+                        .mobile_group
+                        .group_filters
+                            .filter_main_text
+                                font-size: 13px
+                            .filter_selected_text
+                                font-size: 13px
+                            .filter_selected_arrow
+                                font-size: 13px
+                        .matches_group_items
+                            .matches_group_item
+                                .group_item_text
+                    .matches_filters_text_container
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                        .matches_filters_text_original
+                        .matches_filters_text_plagiat
+                .view_and_pages_set_container
+                    justify-content: space-between
+                    min-width: 100%
+                    margin: 0 0 0 0
+                    .matches_view_set
+                        height: 25px
+                        width: 100px
+                        justify-content: space-evenly
+                        .view_set_text
+                            font-size: 10px
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                                max-width: 22px
+                                max-height: 22px
+                    .matches_pages_set
+                        height: 25px
+                        width: 150px
+                        .pages_set_text
+                            font-size: 11px
+                        .pages_set_blocks
+                            .page_block
+                                width: 18px
+                                height: 18px
+                                font-size: 11px
+                            .pages_next_block
+                                width: 18px
+                                height: 18px
+                    
+
+            .matches_main_pictures_block
+                width: calc(100% - 15px)
+                .matches_left_filters_block
+                .matches_image_items_vertical_view_container
+                    .matches_image_item
+                        min-width: 400px
+                        .image_item_photo_container
+                            flex-direction: column
+                            min-width: 80px
+                            width: 110px
+                            .image_item_photo
+                                min-width: 100%
+                                height: 50%
+                        .image_item_description_block
+                            min-width: 180px
+                            width: 200px
+                            .item_description_main
+                                .description_main
+                                    .main_matches_block
+                                        width: 55px
+                                        height: 15px
+                                        font-size: 8px
+                                    .description_main_header
+                                        font-size: 9px
+                                    .description_main_text
+                                        font-size: 9px
+                                .item_description_bottom
+                                    .description_bottom_header
+                                        font-size: 8px
+                                    .description_bottom_url, a
+                                        font-size: 7px
+                        .item_button_star_seen_container
+                            margin: 0 5px
+                            .image_item_button
+                                max-width: 30px
+                        .item_button_star_seen_container
+                            width: 50px
+                            .image_item_button
+                                justify-content: center
+                                min-width: 50px
+                                width: 50px
+                                .item_button_block
+                                    min-height: 17px
+                                    font-size: 8px
+                                    min-width: 50px
+                                    max-width: 50px
+                        .matches_item_options_container
+                            height: 134px
+                            min-width: 30px
+                            width: 30px
+                            .item_options_container
+                                width: 100%
+                                height: 30px
+                                .item_options
+                                    width: 100%
+                                    height: 100%
+                                    .option_icon
+                                        img
+                                            width: 15px
+                                            height: 15px
+                                    .option_text
+                                        font-size: 4px
+
+
+
+
+@media screen and (max-width: 300px)
+    .matchesPageContainer
+        .matchesPageMainBlock
+            .matches_all_filters_block
+                .mobile_filters_button
+                .matches_sort_filters_container
+                    .active
+                    .group_container
+                        .pc_group
+                        .mobile_group
+                        .group_filters
+                            .filter_main_text
+                            .filter_selected_text
+                            .filter_selected_arrow
+                        .matches_group_items
+                            .matches_group_item
+                                .group_item_text
+                    .matches_filters_text_container
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                        .matches_filters_text_original
+                        .matches_filters_text_plagiat
+                .view_and_pages_set_container
+                    .matches_view_set
+                        .view_set_text
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                    .matches_pages_set
+                        .pages_set_text
+                        .pages_set_blocks
+                            .page_block
+                            .pages_next_block
+
+
+
+                .view_and_pages_set_container
+                    .matches_view_set
+                        width: 90px
+                        .view_set_text
+                        .view_set_groupRow, .view_set_groupWrap
+                            img
+                    .matches_pages_set
+                        width: 140px
+                        .pages_set_text
+                            margin-right: 15px
+                        .pages_set_blocks
+                            .page_block
+                                width: 17px
+                                height: 17px
+                                font-size: 10px
+                            .pages_next_block
+                                width: 17px
+                                height: 17px
+                                font-size: 10px
+
+            .matches_main_pictures_block
+                .matches_left_filters_block
+                    flex-direction: column-reverse
+                    align-items: flex-start
+                    min-height: 50px
+                    .matches_filters_text_container
+                        align-items: flex-start
+                        height: 25px
+                        .matches_filters_text_original, .matches_filters_text_plagiat
+                            justify-content: flex-start
+                            font-size: 8px
+                            height: 12px
+                .matches_image_items_vertical_view_container
+                    .matches_image_item
+                        .image_item_photo_container
+                            .image_item_photo
+                        .image_item_description_block
+                            .item_description_main
+                                .description_main
+                                    .main_matches_block
+                                    .description_main_header
+                                    .description_main_text
+                                .item_description_bottom
+                                    .description_bottom_header
+                                    .description_bottom_url, a
+                        .item_button_star_seen_container
+                            .image_item_button
+                        .item_button_star_seen_container
+                            .image_item_button
+                                .item_button_block
+                        .matches_item_options_container
+                            .item_options_container
+                                .item_options
+                                    .option_icon
+                                        img
+                                    .option_text

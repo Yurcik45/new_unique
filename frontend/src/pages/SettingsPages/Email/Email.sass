@@ -1,0 +1,351 @@
+@import "../../../App"
+*
+  // border: 1px solid black
+
+.email_warning_main_block
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 1100px
+  height: 100%
+  border-radius: 5px
+  padding: 20px
+  margin: auto
+  .email_warning_itemsTopContainer
+    display: flex
+    flex-direction: row
+    align-items: center
+    // min-width: 600px
+    width: 100%
+    height: 350px
+    justify-content: space-between
+    border: 1px solid rgba(100, 100, 100, 0.3)
+    margin-bottom: 50px
+    border-radius: 5px
+    background-color: $simpleWhite
+    .email_warning_sendingBlock
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      min-width: 200px
+      width: 49%
+      height: 320px
+      padding: 10px
+      .email_warning_sendingBlock_descriptionItemsContainer
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        min-width: 100px
+        max-width: 100%
+        height: 45%
+        .email_warning_send_desc_itemHeader
+          display: flex
+          align-items: center
+          justify-content: center
+          margin-left: 20px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 24px
+          line-height: 39px
+          text-align: center
+          color: $simpleBlack
+          padding-bottom: 10px
+        .email_warning_send_desc_itemDescription
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          min-width: 365px
+          width: 100%
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 14px
+          line-height: 20px
+          color: $emailWarnDescriptTextColor
+
+      .email_warning_sendingBlock_itemsContainer
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        left: 0
+        width: 100%
+        height: 100%
+        .email_warning_sendBlock_items
+          display: flex
+          align-items: center
+          width: 100%
+          height: 100%
+
+
+
+
+  .email_warning_itemsBottomContainer
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    height: 420px
+    border: 1px solid rgba(100, 100, 100, 0.3)
+    border-radius: 5px
+    padding: 10px 0
+    background-color: $simpleWhite
+    .email_warnings_block
+      display: flex
+      flex-direction: column
+      width: calc( 50% - 20px)
+      height: 100%
+      padding: 0 10px
+      .email_warning_sendingBlock_descriptionItemsContainer
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        max-width: 100vw
+        max-height: 30vh
+        justify-content: center
+        height: 30%
+        .email_warning_send_desc_itemHeader
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          max-width: calc(100% - 20px)
+          width: calc(100% - 20px)
+          height: 40px
+          max-height: 50px
+          margin-left: 20px
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 24px
+          line-height: 39px
+          text-align: center
+          color: $simpleBlack
+          padding-bottom: 10px
+        .email_warning_send_desc_itemDescription
+          display: flex
+          align-items: center
+          margin-left: 10px
+          justify-content: center
+          font-family: $fontMain
+          font-style: normal
+          font-weight: bold
+          font-size: 14px
+          line-height: 20px
+          color: $emailWarnDescriptTextColor
+      .email_warn_userlyBlock
+        flex-direction: column
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 100%
+        width: 100%
+        max-width: 100%
+        padding: 0
+        height: 250px
+        max-height: 250px
+        overflow-y: scroll
+        border: 0.1px solid #e5e5e5
+        margin: 5px 0
+        iframe
+          width: 100% !important
+          height: 400px !important
+          min-width: 200px !important
+          min-height: 400px !important
+          max-width: 100% !important
+          max-height: 400px !important
+  .email_warning_saveButton
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 50px
+    margin-top: 20px
+    width: 100%
+    background-color: $mainBackground
+
+@media screen and ( max-width: 1400px )
+  .email_warning_main_block
+    width: 1000px
+    .email_warning_itemsTopContainer
+      .email_warning_sendingBlock
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+          .email_warning_send_desc_itemDescription
+        .email_warning_sendingBlock_itemsContainer
+          .email_warning_sendBlock_items
+    .email_warning_itemsBottomContainer
+      .email_warnings_block
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+          .email_warning_send_desc_itemDescription
+        .email_warn_userlyBlock
+          iframe
+  .email_warning_saveButton
+@media screen and ( max-width: 1300px )
+  .email_warning_main_block
+    width: 900px
+@media screen and ( max-width: 1200px )
+  .email_warning_main_block
+    width: 800px
+    .email_warning_itemsTopContainer
+      .email_warning_sendingBlock
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+          .email_warning_send_desc_itemDescription
+        .email_warning_sendingBlock_itemsContainer
+          .email_warning_sendBlock_items
+    .email_warning_itemsBottomContainer
+      flex-direction: column
+      align-items: center
+      margin: 0 10px
+      height: 780px
+      .email_warnings_block
+        flex-direction: column
+        height: 100%
+        width: calc(100% - 40px)
+        margin: 0 20px
+        margin-bottom: 15px
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+            height: 25px
+            margin-left: 5px
+          .email_warning_send_desc_itemDescription
+            margin-left: 5px
+
+@media screen and ( max-width: 1100px )
+  .email_warning_main_block
+    width: 750px
+    .email_warning_itemsTopContainer
+      .email_warning_sendingBlock
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+          .email_warning_send_desc_itemDescription
+            font-size: 13px
+            min-width: 340px
+        .email_warning_sendingBlock_itemsContainer
+          .email_warning_sendBlock_items
+    .email_warning_itemsBottomContainer
+      .email_warnings_block
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+            font-size: 21px
+          .email_warning_send_desc_itemDescription
+@media screen and ( max-width: 850px )
+  .email_warning_main_block
+    width: 700px
+    .email_warning_itemsTopContainer
+      .email_warning_sendingBlock
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+          .email_warning_send_desc_itemDescription
+        .email_warning_sendingBlock_itemsContainer
+          .email_warning_sendBlock_items
+    .email_warning_itemsBottomContainer
+      .email_warnings_block
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+            font-size: 20px
+          .email_warning_send_desc_itemDescription
+@media screen and ( max-width: 800px )
+  .email_warning_main_block
+    justify-content: center
+    
+    .email_warning_itemsTopContainer
+      flex-direction: column
+      justify-content: flex-start
+      margin: 0 15px
+      height: 545px
+      .email_warning_sendingBlock
+        width: calc(100% - 60px)
+        margin: 0 30px
+        height: 250px
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+            margin-left: 0
+          .email_warning_send_desc_itemDescription
+        .email_warning_sendingBlock_itemsContainer
+          .email_warning_sendBlock_items
+    .email_warning_itemsBottomContainer
+      margin-top: 20px
+      height: 800px
+      justify-content: flex-start
+      .email_warnings_block
+        margin-bottom: 0
+        height: 400px
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+          .email_warning_send_desc_itemDescription
+        .email_warn_userlyBlock
+          iframe
+    .email_warning_saveButton
+@media screen and ( max-width: 750px )
+  .email_warning_main_block
+    width: 600px
+    .email_warning_itemsTopContainer
+      flex-direction: column
+      margin: 0 15px
+      .email_warning_sendingBlock
+        width: calc(100% - 30px)
+        padding: 10px
+    .email_warning_itemsBottomContainer
+      margin-top: 20px
+      .email_warnings_block
+        // width: calc(100% - 10px)
+        // margin: 0 10px
+        // padding: 10px 0
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+          .email_warning_send_desc_itemDescription
+        .email_warn_userlyBlock
+          iframe
+@media screen and ( max-width: 650px )
+  .email_warning_main_block
+    width: 500px
+    .email_warning_itemsTopContainer
+      flex-direction: column
+      margin: 0 15px
+      .email_warning_sendingBlock
+    .email_warning_itemsBottomContainer
+      margin-top: 20px
+      .email_warnings_block
+        width: calc(100% - 10px)
+        margin: 0 10px
+        padding: 10px 0
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+          .email_warning_send_desc_itemDescription
+        .email_warn_userlyBlock
+          iframe
+@media screen and ( max-width: 550px )
+  .email_warning_main_block
+    min-width: 420px
+    width: 420px
+@media screen and ( max-width: 450px )
+  .email_warning_main_block
+    min-width: 370px
+    width: 370px
+    .email_warning_itemsTopContainer
+      .email_warning_sendingBlock
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+            font-size: 20px
+            height: 25px
+          .email_warning_send_desc_itemDescription
+            font-size: 10px
+            min-width: 340px
+        .email_warning_sendingBlock_itemsContainer
+          .email_warning_sendBlock_items
+    .email_warning_itemsBottomContainer
+      .email_warnings_block
+        .email_warning_sendingBlock_descriptionItemsContainer
+          .email_warning_send_desc_itemHeader
+            height: 25px
+            font-size: 19px
+          .email_warning_send_desc_itemDescription
+            font-size: 11px
+@media screen and ( max-width: 400px )
+  .email_warning_main_block
+    min-width: 320px
+    width: 320px
+  

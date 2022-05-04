@@ -1,0 +1,53 @@
+version: '3.8'
+
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+    command: uvicorn --host 0.0.0.0 --port 8000 app.main:app
+    volumes:
+      - ./backend/app:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    env_file:
+      - ./.env.prod
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: frontend.dockerfile
+    command: serve -s build -l tcp://0.0.0.0:3000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    env_file:
+      - ./.env.prod
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env.prod
+  redis:
+    image: redis
+  dramatiq:
+    build:
+      context: ./backend
+      dockerfile: dramatiq.dockerfile
+    command: dramatiq app.core.dramatiq:redis_broker app.utils.dramatiq.actors -v
+    volumes:
+      - ./backend/app:/app
+    depends_on:
+      - backend
+      - redis
+    env_file:
+      - ./.env.prod
+volumes:
+  postgres_data:

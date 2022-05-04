@@ -1,0 +1,53 @@
+$mainBackground: #f6f7ff
+$inputBackground: #FAFCFD
+$mainMenuBarColor: #E9F0F3
+$simpleBackground: #FFFFFF
+$simpleBlack: #000000
+$simpleWhite: #ffffff
+//$mainGreen: #007890
+$mainColor: #48519D
+$mainButtonRed: #900000
+$grayFontColor: #909090
+$inputBorderGray: #E0E6E7
+$dollarColor: #848484
+$planBenefitsRed: #6D6D6D
+$disableFontColor: #979797
+$emailWarnDescriptTextColor: #919191
+$helloPageFooterText: rgba(255, 255, 255, 0.49)
+$fontMain: 'Cambay', sans-serif
+
+// scrollbar customization
+/* width */
+::-webkit-scrollbar
+  min-height: 1px
+  height: 1px
+  max-height: 1px
+  min-width: 3px
+  width: 3px
+  max-width: 3px
+/* Track */
+::-webkit-scrollbar-track
+  background: #f1f1f1
+  // background: #000
+/* Handle */
+::-webkit-scrollbar-thumb
+  background: #cacaca
+  // background: red
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+  // background: #838383
+  background: $mainColor
+  // background: pink
+
+.App
+  display: flex
+  min-width: 100%
+  width: 100%
+  max-width: 100%
+  overflow: hidden
+  height: 100%
+  flex-direction: row
+
+@media screen and (max-width: 1000px)
+  .App
+    flex-direction: column
